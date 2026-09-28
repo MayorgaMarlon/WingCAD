@@ -1,0 +1,60 @@
+{
+  "formato": "WingCAD",
+  "version": 1,
+  "documento": {
+    "nombre": "Proyecto aeronáutico",
+    "objetos": [
+      {
+        "id": "33945c80-404d-443f-8212-8984b8a544fc",
+        "clave": "wing",
+        "nombre": "Ala principal",
+        "visible": true,
+        "placement": {
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "parametros": {
+          "perfil_raiz": "2412",
+          "perfil_punta": "2412",
+          "cuerda_raiz_mm": 1000.0,
+          "cuerda_punta_mm": 500.0,
+          "semi_span_mm": 4000.0,
+          "flecha_grados": 15.0,
+          "diedro_grados": 3.0,
+          "torsion_punta_grados": -3.0,
+          "numero_puntos": 60,
+          "numero_secciones": 10
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "97ca6057-086b-426a-9cc0-71391525010f",
+        "clave": "fuselage",
+        "nombre": "Fuselaje principal",
+        "visible": true,
+        "placement": {
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "parametros": {
+          "length_mm": 8000.0,
+          "max_width_mm": 1200.0,
+          "max_height_mm": 1400.0,
+          "nose_ratio": 0.2,
+          "tail_ratio": 0.3,
+          "num_sections": 18
+        }
+      }
+    ]
+  }
+}

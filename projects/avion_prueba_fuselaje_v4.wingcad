@@ -1,0 +1,179 @@
+{
+  "formato": "WingCAD",
+  "version": 1,
+  "documento": {
+    "nombre": "Proyecto aeronáutico",
+    "objetos": [
+      {
+        "id": "e727a963-da8c-4188-bfd2-008523b6dc92",
+        "clave": "wing",
+        "nombre": "Ala principal",
+        "visible": true,
+        "placement": {
+          "x_mm": 3040.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "perfil_raiz": "2412",
+          "perfil_punta": "2412",
+          "cuerda_raiz_mm": 1000.0,
+          "cuerda_punta_mm": 500.0,
+          "semi_span_mm": 4000.0,
+          "flecha_grados": 15.0,
+          "diedro_grados": 3.0,
+          "torsion_punta_grados": -3.0,
+          "numero_puntos": 60,
+          "numero_secciones": 10
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "2c502d99-d11e-4ce5-9398-f4bbc8d368f1",
+        "clave": "fuselage",
+        "nombre": "Fuselaje principal",
+        "visible": true,
+        "placement": {
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 8000.0,
+          "max_width_mm": 1200.0,
+          "max_height_mm": 1400.0,
+          "nose_ratio": 0.2,
+          "tail_ratio": 0.3,
+          "nose_roundness": 1.0,
+          "tail_roundness": 1.8,
+          "tail_end_ratio": 0.1,
+          "num_sections": 32
+        }
+      },
+      {
+        "id": "44e7447c-e101-4ef9-95f3-cac5666e111d",
+        "clave": "wing",
+        "nombre": "Estabilizador horizontal",
+        "visible": true,
+        "placement": {
+          "x_mm": 6240.0,
+          "y_mm": 0.0,
+          "z_mm": 168.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 500.0,
+          "cuerda_punta_mm": 250.0,
+          "semi_span_mm": 1500.0,
+          "flecha_grados": 25.0,
+          "diedro_grados": 0.0,
+          "torsion_punta_grados": 0.0,
+          "numero_puntos": 60,
+          "numero_secciones": 10
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "32a904ae-a93a-4993-bae7-151130e8654c",
+        "clave": "wing",
+        "nombre": "Estabilizador vertical",
+        "visible": true,
+        "placement": {
+          "x_mm": 6080.0,
+          "y_mm": 0.0,
+          "z_mm": 504.0,
+          "roll_deg": 90.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 600.0,
+          "cuerda_punta_mm": 220.0,
+          "semi_span_mm": 1200.0,
+          "flecha_grados": 30.0,
+          "diedro_grados": 0.0,
+          "torsion_punta_grados": 0.0,
+          "numero_puntos": 60,
+          "numero_secciones": 10
+        },
+        "modo_superficie": "semiala_positiva"
+      },
+      {
+        "id": "814c1932-d9e8-4788-9e62-a7d17303f268",
+        "clave": "nacelle",
+        "nombre": "Góndola 1",
+        "visible": true,
+        "placement": {
+          "x_mm": 2400.0,
+          "y_mm": 2080.0,
+          "z_mm": -997.5,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 1800.0,
+          "inlet_diameter_mm": 900.0,
+          "max_diameter_mm": 1050.0,
+          "outlet_diameter_mm": 760.0,
+          "wall_thickness_mm": 20.0,
+          "max_diameter_position_ratio": 0.35,
+          "num_sections": 18
+        }
+      },
+      {
+        "id": "b84469f9-e714-4b73-ac39-7028c61b9411",
+        "clave": "nacelle",
+        "nombre": "Góndola 2",
+        "visible": true,
+        "placement": {
+          "x_mm": 2400.0,
+          "y_mm": -2080.0,
+          "z_mm": -997.5,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 1800.0,
+          "inlet_diameter_mm": 900.0,
+          "max_diameter_mm": 1050.0,
+          "outlet_diameter_mm": 760.0,
+          "wall_thickness_mm": 20.0,
+          "max_diameter_position_ratio": 0.35,
+          "num_sections": 18
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "formato": "WingCAD",
+  "version": 1,
+  "documento": {
+    "nombre": "Proyecto aeronáutico",
+    "objetos": [
+      {
+        "id": "48f6eb01-2ca9-4eef-acac-c7e539fcbd4b",
+        "clave": "fuselage",
+        "nombre": "Fuselaje principal",
+        "visible": true,
+        "placement": {
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 8000.0,
+          "max_width_mm": 1200.0,
+          "max_height_mm": 1400.0,
+          "nose_ratio": 0.2,
+          "tail_ratio": 0.3,
+          "nose_roundness": 1.0,
+          "tail_roundness": 1.8,
+          "num_sections": 32
+        }
+      }
+    ]
+  }
+}

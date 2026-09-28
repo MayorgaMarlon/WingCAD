@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+wingcad/
+
+# VS Code
+.vscode/
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Geometrías generadas
+exports/
+*.step
+*.stp
+
+# Compilaciones
+build/
+dist/
+*.egg-info/
