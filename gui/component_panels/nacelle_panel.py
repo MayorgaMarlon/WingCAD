@@ -1,5 +1,7 @@
 """Panel de propiedades de una góndola."""
 
+from gui.display_text import display_label
+
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import (
     QComboBox,
@@ -92,7 +94,7 @@ class NacellePanel(QWidget):
         )
 
         self.nombre_control = QLineEdit(
-            "Góndola 1"
+            "Nacelle 1"
         )
 
         formulario_identificacion.addRow(
@@ -167,7 +169,7 @@ class NacellePanel(QWidget):
             self.diametro_entrada_control,
         )
         formulario_dimensiones.addRow(
-            "Diámetro máximo:",
+            "Maximum diameter:",
             self.diametro_maximo_control,
         )
         formulario_dimensiones.addRow(
@@ -236,12 +238,12 @@ class NacellePanel(QWidget):
 
         for material in listar_materiales():
             self.material_control.addItem(
-                material.nombre,
+                display_label(material.nombre),
                 material.densidad_kg_m3,
             )
 
         self.material_control.addItem(
-            "Personalizado",
+            "Custom",
             "personalizado",
         )
 
@@ -286,8 +288,7 @@ class NacellePanel(QWidget):
         )
 
         ayuda_modelo = QLabel(
-            "Para la góndola hueca se recomienda "
-            "usar «Volumen real de pared»."
+            "For a hollow nacelle, use the actual wall volume."
         )
         ayuda_modelo.setWordWrap(True)
         ayuda_modelo.setStyleSheet(
@@ -430,8 +431,7 @@ class NacellePanel(QWidget):
 
         if not nombre:
             raise ValueError(
-                "El nombre de la góndola no puede "
-                "estar vacío."
+                "The nacelle name cannot be empty."
             )
 
         return nombre
@@ -477,7 +477,7 @@ class NacellePanel(QWidget):
 
         if densidad <= 0.0:
             raise ValueError(
-                "La densidad debe ser mayor que cero."
+                "Density must be greater than zero."
             )
 
         return densidad
@@ -494,7 +494,7 @@ class NacellePanel(QWidget):
 
         if espesor <= 0.0:
             raise ValueError(
-                "El espesor debe ser mayor que cero."
+                "Thickness must be greater than zero."
             )
 
         return espesor

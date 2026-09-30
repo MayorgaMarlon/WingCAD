@@ -1,0 +1,67 @@
+{
+  "formato": "WingCAD",
+  "version": 1,
+  "documento": {
+    "nombre": "Manta UAV - flying wing concept",
+    "objetos": [
+      {
+        "id": "608d7b80-26b9-40ed-ad07-4da4d3850819",
+        "clave": "fuselage",
+        "nombre": "UAV center body",
+        "visible": true,
+        "placement": {
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "length_mm": 2800.0,
+          "max_width_mm": 1100.0,
+          "max_height_mm": 380.0,
+          "nose_ratio": 0.3,
+          "tail_ratio": 0.4,
+          "nose_roundness": 0.85,
+          "tail_roundness": 1.25,
+          "tail_end_ratio": 0.04,
+          "num_sections": 24
+        }
+      },
+      {
+        "id": "3a069188-5c1f-4e1b-bd8d-87eb44b29c49",
+        "clave": "wing",
+        "nombre": "UAV swept wing",
+        "visible": true,
+        "placement": {
+          "x_mm": 400.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0018",
+          "perfil_punta": "0010",
+          "cuerda_raiz_mm": 2000.0,
+          "cuerda_punta_mm": 400.0,
+          "semi_span_mm": 3000.0,
+          "flecha_grados": 28.0,
+          "diedro_grados": 2.0,
+          "torsion_punta_grados": -2.0,
+          "numero_puntos": 80,
+          "numero_secciones": 14
+        },
+        "modo_superficie": "simetrica"
+      }
+    ]
+  }
+}

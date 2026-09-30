@@ -1,0 +1,239 @@
+{
+  "formato": "WingCAD",
+  "version": 1,
+  "documento": {
+    "nombre": "Aurora - twin-engine regional airliner",
+    "objetos": [
+      {
+        "id": "95f31907-1f5b-59a4-9c62-7982b78ab180",
+        "clave": "fuselage",
+        "nombre": "Airliner fuselage",
+        "visible": true,
+        "placement": {
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 28000,
+          "max_width_mm": 3000,
+          "max_height_mm": 3200,
+          "nose_ratio": 0.22,
+          "tail_ratio": 0.35,
+          "nose_roundness": 1.0,
+          "tail_roundness": 1.45,
+          "tail_end_ratio": 0.02,
+          "num_sections": 22
+        }
+      },
+      {
+        "id": "504ae546-32f1-5f94-aa4b-c69ceeaa72e0",
+        "clave": "wing",
+        "nombre": "Airliner swept wing",
+        "visible": true,
+        "placement": {
+          "x_mm": 9000.0,
+          "y_mm": 0.0,
+          "z_mm": -600.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "2412",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 4200,
+          "cuerda_punta_mm": 1200,
+          "semi_span_mm": 12500,
+          "flecha_grados": 25,
+          "diedro_grados": 4,
+          "torsion_punta_grados": -2,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "020f8149-23da-5ca6-bbfc-9181dd598e80",
+        "clave": "wing",
+        "nombre": "Airliner tailplane",
+        "visible": true,
+        "placement": {
+          "x_mm": 23500.0,
+          "y_mm": 0.0,
+          "z_mm": 400.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 2000,
+          "cuerda_punta_mm": 800,
+          "semi_span_mm": 4400,
+          "flecha_grados": 25,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "c5b33516-5f76-5cae-aa9e-f9f7eef23c2f",
+        "clave": "wing",
+        "nombre": "Airliner fin",
+        "visible": true,
+        "placement": {
+          "x_mm": 22200.0,
+          "y_mm": 0.0,
+          "z_mm": 700.0,
+          "roll_deg": 90.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 3000,
+          "cuerda_punta_mm": 1000,
+          "semi_span_mm": 3500,
+          "flecha_grados": 30,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "semiala_positiva"
+      },
+      {
+        "id": "64b411f8-7267-5317-b096-4d3e2a5e0a06",
+        "clave": "wing",
+        "nombre": "Port engine pylon",
+        "visible": true,
+        "placement": {
+          "x_mm": 10300.0,
+          "y_mm": -4300.0,
+          "z_mm": -1550.0,
+          "roll_deg": 90.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 1700,
+          "cuerda_punta_mm": 1700,
+          "semi_span_mm": 1100,
+          "flecha_grados": 0,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "semiala_positiva"
+      },
+      {
+        "id": "83dc4e4f-8495-5534-a58e-377225970a4c",
+        "clave": "wing",
+        "nombre": "Starboard engine pylon",
+        "visible": true,
+        "placement": {
+          "x_mm": 10300.0,
+          "y_mm": 4300.0,
+          "z_mm": -1550.0,
+          "roll_deg": 90.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 1700,
+          "cuerda_punta_mm": 1700,
+          "semi_span_mm": 1100,
+          "flecha_grados": 0,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "semiala_positiva"
+      },
+      {
+        "clave": "nacelle",
+        "nombre": "Port engine nacelle",
+        "visible": true,
+        "placement": {
+          "x_mm": 9400.0,
+          "y_mm": -4300.0,
+          "z_mm": -1550.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 2300.0,
+          "inlet_diameter_mm": 1250.0,
+          "max_diameter_mm": 1450.0,
+          "outlet_diameter_mm": 1050.0,
+          "wall_thickness_mm": 25.0,
+          "max_diameter_position_ratio": 0.4,
+          "num_sections": 18
+        },
+        "id": "ac443a65-19f2-5e50-9413-4a2326569a7e"
+      },
+      {
+        "clave": "nacelle",
+        "nombre": "Starboard engine nacelle",
+        "visible": true,
+        "placement": {
+          "x_mm": 9400.0,
+          "y_mm": 4300.0,
+          "z_mm": -1550.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 2300.0,
+          "inlet_diameter_mm": 1250.0,
+          "max_diameter_mm": 1450.0,
+          "outlet_diameter_mm": 1050.0,
+          "wall_thickness_mm": 25.0,
+          "max_diameter_position_ratio": 0.4,
+          "num_sections": 18
+        },
+        "id": "dd53a1f3-4bcc-56c3-bbf5-7af6f4fad76e"
+      }
+    ]
+  }
+}

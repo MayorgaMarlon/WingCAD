@@ -1,0 +1,127 @@
+{
+  "formato": "WingCAD",
+  "version": 1,
+  "documento": {
+    "nombre": "Sierra - high aspect ratio glider",
+    "objetos": [
+      {
+        "id": "097db0a9-74fa-5834-b34b-d01b8f75cf4c",
+        "clave": "fuselage",
+        "nombre": "Glider fuselage",
+        "visible": true,
+        "placement": {
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 6500,
+          "max_width_mm": 650,
+          "max_height_mm": 850,
+          "nose_ratio": 0.22,
+          "tail_ratio": 0.35,
+          "nose_roundness": 1.0,
+          "tail_roundness": 1.45,
+          "tail_end_ratio": 0.02,
+          "num_sections": 22
+        }
+      },
+      {
+        "id": "764b79a2-2268-5149-8f6e-5b61a286a4a9",
+        "clave": "wing",
+        "nombre": "Glider main wing",
+        "visible": true,
+        "placement": {
+          "x_mm": 2000.0,
+          "y_mm": 0.0,
+          "z_mm": 220.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "2412",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 1100,
+          "cuerda_punta_mm": 350,
+          "semi_span_mm": 8500,
+          "flecha_grados": 3,
+          "diedro_grados": 4,
+          "torsion_punta_grados": -2,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "2cd4ae05-abc3-5a8d-8823-f2005da7ae02",
+        "clave": "wing",
+        "nombre": "Glider fin",
+        "visible": true,
+        "placement": {
+          "x_mm": 5000.0,
+          "y_mm": 0.0,
+          "z_mm": 100.0,
+          "roll_deg": 90.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 1000,
+          "cuerda_punta_mm": 400,
+          "semi_span_mm": 1100,
+          "flecha_grados": 18,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "semiala_positiva"
+      },
+      {
+        "id": "3a42fd18-2d7e-5778-b991-a6cf42b754ea",
+        "clave": "wing",
+        "nombre": "Glider T-tail",
+        "visible": true,
+        "placement": {
+          "x_mm": 5550.0,
+          "y_mm": 0.0,
+          "z_mm": 1100.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 500,
+          "cuerda_punta_mm": 250,
+          "semi_span_mm": 1500,
+          "flecha_grados": 5,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "simetrica"
+      }
+    ]
+  }
+}

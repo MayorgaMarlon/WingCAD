@@ -1,0 +1,127 @@
+{
+  "formato": "WingCAD",
+  "version": 1,
+  "documento": {
+    "nombre": "Complete aircraft example",
+    "objetos": [
+      {
+        "id": "d1a4f1c4-4bb3-5798-a451-782cb988dd23",
+        "clave": "wing",
+        "nombre": "Main wing",
+        "visible": true,
+        "placement": {
+          "x_mm": 3040.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "perfil_raiz": "2412",
+          "perfil_punta": "2412",
+          "cuerda_raiz_mm": 1000.0,
+          "cuerda_punta_mm": 500.0,
+          "semi_span_mm": 4000.0,
+          "flecha_grados": 15.0,
+          "diedro_grados": 3.0,
+          "torsion_punta_grados": -3.0,
+          "numero_puntos": 60,
+          "numero_secciones": 10
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "7fde67fa-4336-564d-8a03-87821b9aa1ab",
+        "clave": "fuselage",
+        "nombre": "Main fuselage",
+        "visible": true,
+        "placement": {
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 8000.0,
+          "max_width_mm": 1200.0,
+          "max_height_mm": 1400.0,
+          "nose_ratio": 0.2,
+          "tail_ratio": 0.3,
+          "nose_roundness": 1.0,
+          "tail_roundness": 1.45,
+          "tail_end_ratio": 0.0,
+          "num_sections": 18
+        }
+      },
+      {
+        "id": "4a1f255e-2658-5c2a-9acd-f4cf01a00635",
+        "clave": "wing",
+        "nombre": "Horizontal stabilizer",
+        "visible": true,
+        "placement": {
+          "x_mm": 6240.0,
+          "y_mm": 0.0,
+          "z_mm": 168.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 500.0,
+          "cuerda_punta_mm": 250.0,
+          "semi_span_mm": 1500.0,
+          "flecha_grados": 25.0,
+          "diedro_grados": 0.0,
+          "torsion_punta_grados": 0.0,
+          "numero_puntos": 60,
+          "numero_secciones": 10
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "ba988bf7-5c0f-57c5-a2cb-9e54bd599082",
+        "clave": "wing",
+        "nombre": "Vertical stabilizer",
+        "visible": true,
+        "placement": {
+          "x_mm": 6080.0,
+          "y_mm": 0.0,
+          "z_mm": 504.0,
+          "roll_deg": 90.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 2700.0,
+        "modelo_masa": "solido",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 600.0,
+          "cuerda_punta_mm": 220.0,
+          "semi_span_mm": 1200.0,
+          "flecha_grados": 30.0,
+          "diedro_grados": 0.0,
+          "torsion_punta_grados": 0.0,
+          "numero_puntos": 60,
+          "numero_secciones": 10
+        },
+        "modo_superficie": "semiala_positiva"
+      }
+    ]
+  }
+}

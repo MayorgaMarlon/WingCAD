@@ -1,12 +1,14 @@
 """Ventana principal del modelador aeronáutico."""
 
+from gui.display_text import display_label, display_error
+
 import os
 from pathlib import Path
 
 os.environ.setdefault("QT_API", "pyside6")
 
 import vtk
-from PySide6.QtCore import Qt, QTimer
+from PySide6.QtCore import Qt, QTimer, QLocale
 from PySide6.QtWidgets import (
     QFileDialog,
     QGridLayout,
@@ -46,6 +48,7 @@ class MainWindow(QMainWindow):
     """Interfaz principal del modelador aeronáutico."""
 
     def __init__(self):
+        QLocale.setDefault(QLocale(QLocale.Language.English, QLocale.Country.UnitedStates))
         super().__init__()
 
         self.aplicacion = AeroApplication()
@@ -62,7 +65,7 @@ class MainWindow(QMainWindow):
         self.limites_modelo = None
 
         self.setWindowTitle(
-            "Modelador aeronáutico paramétrico"
+            "Parametric Aircraft Modeler"
         )
         self.resize(1450, 900)
 
@@ -92,7 +95,7 @@ class MainWindow(QMainWindow):
         )
 
         titulo = QLabel(
-            "MODELO AERONÁUTICO"
+            "AIRCRAFT MODEL"
         )
         titulo.setStyleSheet(
             """
@@ -109,16 +112,16 @@ class MainWindow(QMainWindow):
         botones_proyecto = QGridLayout()
 
         self.boton_nuevo_proyecto = QPushButton(
-            "Nuevo proyecto"
+            "New project"
         )
         self.boton_abrir_proyecto = QPushButton(
-            "Abrir proyecto"
+            "Open project"
         )
         self.boton_guardar_proyecto = QPushButton(
-            "Guardar proyecto"
+            "Save project"
         )
         self.boton_propiedades_globales = QPushButton(
-            "Propiedades globales"
+            "Global properties"
         )
 
         self.boton_nuevo_proyecto.clicked.connect(
@@ -169,25 +172,25 @@ class MainWindow(QMainWindow):
         botones_componentes = QGridLayout()
 
         self.boton_nueva_ala = QPushButton(
-            "Nueva ala"
+            "New wing"
         )
         self.boton_nuevo_fuselaje = QPushButton(
-            "Nuevo fuselaje"
+            "New fuselage"
         )
         self.boton_estabilizador_horizontal = QPushButton(
-            "Estabilizador horizontal"
+            "Horizontal stabilizer"
         )
         self.boton_estabilizador_vertical = QPushButton(
-            "Estabilizador vertical"
+            "Vertical stabilizer"
         )
         self.boton_nueva_gondola = QPushButton(
-            "Nueva góndola"
+            "New nacelle"
         )
         self.boton_eliminar = QPushButton(
-            "Eliminar"
+            "Delete"
         )
         self.boton_ordenar_componentes = QPushButton(
-            "Ordenar componentes"
+            "Arrange components"
         )
 
         self.boton_nueva_ala.clicked.connect(
@@ -262,7 +265,7 @@ class MainWindow(QMainWindow):
         # -----------------------------------------------------
 
         grupo_documento = QGroupBox(
-            "Proyecto"
+            "Project"
         )
 
         distribucion_documento = QVBoxLayout(
@@ -297,7 +300,7 @@ class MainWindow(QMainWindow):
         # -----------------------------------------------------
 
         grupo_propiedades = QGroupBox(
-            "Propiedades del objeto"
+            "Object properties"
         )
         distribucion_propiedades = QVBoxLayout(
             grupo_propiedades
@@ -306,7 +309,7 @@ class MainWindow(QMainWindow):
         self.editores_componentes = QStackedWidget()
 
         self.panel_sin_objeto = QLabel(
-            "Selecciona un objeto del documento."
+            "Select an object in the document."
         )
         self.panel_sin_objeto.setAlignment(
             Qt.AlignmentFlag.AlignCenter
@@ -371,7 +374,7 @@ class MainWindow(QMainWindow):
         # -----------------------------------------------------
 
         self.boton_exportar = QPushButton(
-            "Exportar objeto seleccionado a STEP"
+            "Export selected object to STEP"
         )
         self.boton_exportar.setMinimumHeight(38)
         self.boton_exportar.setEnabled(False)
@@ -380,7 +383,7 @@ class MainWindow(QMainWindow):
         )
 
         self.boton_exportar_proyecto = QPushButton(
-            "Exportar proyecto completo a STEP"
+            "Export project as STEP part"
         )
         self.boton_exportar_proyecto.setMinimumHeight(
             42
@@ -401,14 +404,14 @@ class MainWindow(QMainWindow):
         # -----------------------------------------------------
 
         grupo_resultados = QGroupBox(
-            "Resultados"
+            "Results"
         )
         distribucion_resultados = QVBoxLayout(
             grupo_resultados
         )
 
         self.etiqueta_resultados = QLabel(
-            "Documento preparado."
+            "Document ready."
         )
         self.etiqueta_resultados.setWordWrap(True)
         self.etiqueta_resultados.setAlignment(
@@ -446,7 +449,7 @@ class MainWindow(QMainWindow):
         # =====================================================
 
         grupo_visualizador = QGroupBox(
-            "Visualización 3D"
+            "3D View"
         )
         distribucion_visualizador = QVBoxLayout(
             grupo_visualizador
@@ -455,22 +458,22 @@ class MainWindow(QMainWindow):
         barra_vistas = QHBoxLayout()
 
         self.boton_isometrica = QPushButton(
-            "Isométrica"
+            "Isometric"
         )
         self.boton_superior = QPushButton(
-            "Superior"
+            "Top"
         )
         self.boton_frontal = QPushButton(
-            "Frontal"
+            "Front"
         )
         self.boton_lateral = QPushButton(
-            "Lateral"
+            "Side"
         )
         self.boton_ajustar = QPushButton(
-            "Ajustar"
+            "Fit"
         )
         self.boton_aristas = QPushButton(
-            "Aristas"
+            "Edges"
         )
         self.boton_aristas.setCheckable(True)
 
@@ -578,8 +581,8 @@ class MainWindow(QMainWindow):
 
         respuesta = QMessageBox.question(
             self,
-            "Nuevo proyecto",
-            "Se descartará el modelo actual. ¿Deseas continuar?",
+            "New project",
+            "The current model will be discarded. Do you want to continue?",
             QMessageBox.StandardButton.Yes
             | QMessageBox.StandardButton.No,
             QMessageBox.StandardButton.No,
@@ -606,7 +609,7 @@ class MainWindow(QMainWindow):
 
         nombre = (
             self.aplicacion.documento.nombre.strip()
-            or "proyecto"
+            or "project"
         )
 
         sugerido = carpeta / (
@@ -615,9 +618,10 @@ class MainWindow(QMainWindow):
 
         archivo, _ = QFileDialog.getSaveFileName(
             self,
-            "Guardar proyecto WingCAD",
+            "Save WingCAD project",
             str(sugerido),
-            "Proyecto WingCAD (*.wingcad)",
+            "WingCAD project (*.wingcad)",
+            options=QFileDialog.Option.DontUseNativeDialog,
         )
 
         if not archivo:
@@ -630,15 +634,15 @@ class MainWindow(QMainWindow):
 
             QMessageBox.information(
                 self,
-                "Proyecto guardado",
-                f"Proyecto guardado en:\n{ruta}",
+                "Project saved",
+                f"Project saved to:\n{ruta}",
             )
 
         except Exception as error:
             QMessageBox.critical(
                 self,
-                "Error al guardar proyecto",
-                str(error),
+                "Unable to save project",
+                display_error(error),
             )
 
     def abrir_proyecto(self):
@@ -655,9 +659,10 @@ class MainWindow(QMainWindow):
 
         archivo, _ = QFileDialog.getOpenFileName(
             self,
-            "Abrir proyecto WingCAD",
+            "Open WingCAD project",
             str(carpeta),
-            "Proyecto WingCAD (*.wingcad)",
+            "WingCAD project (*.wingcad)",
+            options=QFileDialog.Option.DontUseNativeDialog,
         )
 
         if not archivo:
@@ -674,15 +679,15 @@ class MainWindow(QMainWindow):
 
             QMessageBox.information(
                 self,
-                "Proyecto abierto",
-                f"Proyecto cargado:\n{archivo}",
+                "Project opened",
+                f"Project loaded:\n{archivo}",
             )
 
         except Exception as error:
             QMessageBox.critical(
                 self,
-                "Error al abrir proyecto",
-                str(error),
+                "Unable to open project",
+                display_error(error),
             )
 
     def _restablecer_interfaz_documento(self):
@@ -704,7 +709,7 @@ class MainWindow(QMainWindow):
         self.boton_exportar.setEnabled(False)
 
         self.etiqueta_resultados.setText(
-            "Selecciona un objeto del proyecto."
+            "Select an object in the project."
         )
     def _ordenar_componentes_automaticamente(self):
         """
@@ -736,7 +741,7 @@ class MainWindow(QMainWindow):
                 fuselaje_referencia = objeto
 
                 if objeto.nombre.lower().startswith(
-                    "fuselaje principal"
+                    ("fuselaje principal", "main fuselage")
                 ):
                     break
 
@@ -776,8 +781,8 @@ class MainWindow(QMainWindow):
             ):
                 continue
 
-            if objeto.nombre.strip().lower() == (
-                "ala principal"
+            if objeto.nombre.strip().lower() in (
+                "ala principal", "main wing"
             ):
                 ala_principal = objeto
                 break
@@ -829,7 +834,7 @@ class MainWindow(QMainWindow):
 
             nombre = objeto.nombre.strip().lower()
 
-            if nombre == "ala principal":
+            if nombre in ("ala principal", "main wing"):
                 objeto.establecer_placement(
                     Placement(
                         x_mm=posicion_ala_x,
@@ -839,7 +844,7 @@ class MainWindow(QMainWindow):
                 )
 
             elif nombre.startswith(
-                "estabilizador horizontal"
+                ("estabilizador horizontal", "horizontal stabilizer")
             ):
                 objeto.establecer_placement(
                     Placement(
@@ -850,7 +855,7 @@ class MainWindow(QMainWindow):
                 )
 
             elif nombre.startswith(
-                "estabilizador vertical"
+                ("estabilizador vertical", "vertical stabilizer")
             ):
                 objeto.establecer_placement(
                     Placement(
@@ -969,15 +974,15 @@ class MainWindow(QMainWindow):
                 )
 
             self.statusBar().showMessage(
-                "Componentes ordenados automáticamente.",
+                "Components arranged automatically.",
                 4000,
             )
 
         except Exception as error:
             QMessageBox.critical(
                 self,
-                "Error al ordenar componentes",
-                str(error),
+                "Unable to arrange components",
+                display_error(error),
             )
 
     def crear_nueva_ala(self):
@@ -991,9 +996,9 @@ class MainWindow(QMainWindow):
             )
 
             if cantidad_alas == 0:
-                nombre = "Ala principal"
+                nombre = "Main wing"
             else:
-                nombre = f"Ala {cantidad_alas + 1}"
+                nombre = f"Wing {cantidad_alas + 1}"
 
             componente = (
                 self.aplicacion.crear_componente(
@@ -1024,8 +1029,8 @@ class MainWindow(QMainWindow):
         except Exception as error:
             QMessageBox.critical(
                 self,
-                "Error al crear componente",
-                str(error),
+                "Unable to create component",
+                display_error(error),
             )
 
     def crear_nuevo_fuselaje(self):
@@ -1038,9 +1043,9 @@ class MainWindow(QMainWindow):
             )
 
             if cantidad == 0:
-                nombre = "Fuselaje principal"
+                nombre = "Main fuselage"
             else:
-                nombre = f"Fuselaje {cantidad + 1}"
+                nombre = f"Fuselage {cantidad + 1}"
 
             componente = self.aplicacion.crear_componente(
                 clave="fuselage",
@@ -1064,8 +1069,8 @@ class MainWindow(QMainWindow):
         except Exception as error:
             QMessageBox.critical(
                 self,
-                "Error al crear fuselaje",
-                str(error),
+                "Unable to create fuselage",
+                display_error(error),
             )
     def crear_estabilizador_horizontal(self):
         """Crea un estabilizador horizontal paramétrico."""
@@ -1073,16 +1078,16 @@ class MainWindow(QMainWindow):
         try:
             cantidad = sum(
                 objeto.nombre.startswith(
-                    "Estabilizador horizontal"
+                    ("Estabilizador horizontal", "Horizontal stabilizer")
                 )
                 for objeto in self.aplicacion.documento.objetos
             )
 
             if cantidad == 0:
-                nombre = "Estabilizador horizontal"
+                nombre = "Horizontal stabilizer"
             else:
                 nombre = (
-                    f"Estabilizador horizontal {cantidad + 1}"
+                    f"Horizontal stabilizer {cantidad + 1}"
                 )
 
             componente = self.aplicacion.crear_componente(
@@ -1132,8 +1137,8 @@ class MainWindow(QMainWindow):
         except Exception as error:
             QMessageBox.critical(
                 self,
-                "Error al crear estabilizador horizontal",
-                str(error),
+                "Unable to create horizontal stabilizer",
+                display_error(error),
             )
 
     def crear_estabilizador_vertical(self):
@@ -1142,16 +1147,16 @@ class MainWindow(QMainWindow):
         try:
             cantidad = sum(
                 objeto.nombre.startswith(
-                    "Estabilizador vertical"
+                    ("Estabilizador vertical", "Vertical stabilizer")
                 )
                 for objeto in self.aplicacion.documento.objetos
             )
 
             if cantidad == 0:
-                nombre = "Estabilizador vertical"
+                nombre = "Vertical stabilizer"
             else:
                 nombre = (
-                    f"Estabilizador vertical {cantidad + 1}"
+                    f"Vertical stabilizer {cantidad + 1}"
                 )
 
             componente = self.aplicacion.crear_componente(
@@ -1202,8 +1207,8 @@ class MainWindow(QMainWindow):
         except Exception as error:
             QMessageBox.critical(
                 self,
-                "Error al crear estabilizador vertical",
-                str(error),
+                "Unable to create vertical stabilizer",
+                display_error(error),
             )
     def crear_nueva_gondola(self):
         """Crea una nueva góndola paramétrica."""
@@ -1217,7 +1222,7 @@ class MainWindow(QMainWindow):
             ]
 
             numero = len(gondolas) + 1
-            nombre = f"Góndola {numero}"
+            nombre = f"Nacelle {numero}"
 
             componente = (
                 self.aplicacion.crear_componente(
@@ -1250,8 +1255,8 @@ class MainWindow(QMainWindow):
         except Exception as error:
             QMessageBox.critical(
                 self,
-                "Error al crear góndola",
-                str(error),
+                "Unable to create nacelle",
+                display_error(error),
             )
 
     def recalcular_objeto_actual(self):
@@ -1260,8 +1265,8 @@ class MainWindow(QMainWindow):
         if self.objeto_actual is None:
             QMessageBox.warning(
                 self,
-                "Sin selección",
-                "Selecciona un objeto del documento.",
+                "No selection",
+                "Select an object in the document.",
             )
             return
 
@@ -1392,8 +1397,8 @@ class MainWindow(QMainWindow):
 
             QMessageBox.critical(
                 self,
-                "Error al recalcular",
-                str(error),
+                "Unable to rebuild",
+                display_error(error),
             )
 
     def eliminar_objeto_actual(self):
@@ -1402,16 +1407,16 @@ class MainWindow(QMainWindow):
         if self.objeto_actual is None:
             QMessageBox.warning(
                 self,
-                "Sin selección",
-                "Selecciona un objeto para eliminar.",
+                "No selection",
+                "Select an object to delete.",
             )
             return
 
         respuesta = QMessageBox.question(
             self,
-            "Eliminar objeto",
+            "Delete object",
             (
-                f"¿Deseas eliminar "
+                f"Do you want to delete "
                 f"'{self.objeto_actual.nombre}'?"
             ),
             QMessageBox.StandardButton.Yes
@@ -1441,7 +1446,7 @@ class MainWindow(QMainWindow):
         self._actualizar_escena_documento()
 
         self.etiqueta_resultados.setText(
-            "Objeto eliminado."
+            "Object deleted."
         )
 
     def _seleccionar_objeto(
@@ -1517,8 +1522,8 @@ class MainWindow(QMainWindow):
         if self.objeto_actual is None:
             QMessageBox.warning(
                 self,
-                "Sin selección",
-                "Selecciona un objeto del documento.",
+                "No selection",
+                "Select an object in the document.",
             )
             self.panel_placement.limpiar()
             return
@@ -1570,8 +1575,8 @@ class MainWindow(QMainWindow):
         except Exception as error:
             QMessageBox.critical(
                 self,
-                "Error de posicionamiento",
-                str(error),
+                "Placement error",
+                display_error(error),
             )
 
             if self.objeto_actual is not None:
@@ -1626,7 +1631,7 @@ class MainWindow(QMainWindow):
 
         if propiedades is None:
             self.etiqueta_resultados.setText(
-                "El objeto todavía no tiene resultados."
+                "This object has no results yet."
             )
             return
 
@@ -1637,34 +1642,34 @@ class MainWindow(QMainWindow):
         )
 
         if propiedades.modelo_masa == "carcasa":
-            modelo_texto = "Carcasa"
+            modelo_texto = "Shell"
             detalle_espesor = (
-                f"Espesor: "
+                f"Thickness: "
                 f"{propiedades.espesor_mm:.2f} mm\n"
             )
             etiqueta_volumen = (
-                "Volumen de material"
+                "Material volume"
             )
         else:
-            modelo_texto = "Sólido"
+            modelo_texto = "Solid"
             detalle_espesor = ""
             etiqueta_volumen = (
-                "Volumen sólido"
+                "Solid volume"
             )
 
         self.etiqueta_resultados.setText(
-            f"Nombre: {componente.nombre}\n"
-            f"Tipo: {componente.tipo}\n"
-            f"Estado válido: "
+            f"Name: {componente.nombre}\n"
+            f"Type: {display_label(componente.tipo)}\n"
+            f"Valid: "
             f"{componente.valido}\n\n"
 
-            f"Área en planta: "
+            f"Planform area: "
             f"{area_planta:.3f} m²\n"
 
-            f"Área superficial: "
+            f"Surface area: "
             f"{propiedades.area_superficial_m2:.3f} m²\n"
 
-            f"Modelo de masa: "
+            f"Mass model: "
             f"{modelo_texto}\n"
 
             f"{detalle_espesor}"
@@ -1672,18 +1677,18 @@ class MainWindow(QMainWindow):
             f"{etiqueta_volumen}: "
             f"{propiedades.volumen_m3:.6f} m³\n"
 
-            f"Densidad: "
+            f"Density: "
             f"{propiedades.densidad_kg_m3:.1f} kg/m³\n"
 
-            f"Masa estimada: "
+            f"Estimated mass: "
             f"{propiedades.masa_kg:.3f} kg\n\n"
 
-            "Centro de gravedad:\n"
+            "Center of gravity:\n"
             f"X = {propiedades.cg_x_mm:.2f} mm\n"
             f"Y = {propiedades.cg_y_mm:.2f} mm\n"
             f"Z = {propiedades.cg_z_mm:.2f} mm\n\n"
 
-            "Momentos de inercia:\n"
+            "Moments of inertia:\n"
             f"Ixx = "
             f"{propiedades.inercia_xx_kg_m2:.3f} kg·m²\n"
             f"Iyy = "
@@ -1702,47 +1707,47 @@ class MainWindow(QMainWindow):
 
         if propiedades is None:
             self.etiqueta_resultados.setText(
-                "El objeto todavía no tiene resultados."
+                "This object has no results yet."
             )
             return
 
         parametros = componente.parametros
 
         if propiedades.modelo_masa == "carcasa":
-            modelo_texto = "Carcasa"
+            modelo_texto = "Shell"
             detalle_espesor = (
-                f"Espesor: "
+                f"Thickness: "
                 f"{propiedades.espesor_mm:.2f} mm\n"
             )
             etiqueta_volumen = (
-                "Volumen de material"
+                "Material volume"
             )
         else:
-            modelo_texto = "Sólido"
+            modelo_texto = "Solid"
             detalle_espesor = ""
             etiqueta_volumen = (
-                "Volumen sólido"
+                "Solid volume"
             )
 
         self.etiqueta_resultados.setText(
-            f"Nombre: {componente.nombre}\n"
-            f"Tipo: {componente.tipo}\n"
-            f"Estado válido: "
+            f"Name: {componente.nombre}\n"
+            f"Type: {display_label(componente.tipo)}\n"
+            f"Valid: "
             f"{componente.valido}\n\n"
 
-            f"Longitud: "
+            f"Length: "
             f"{parametros.length_mm:.2f} mm\n"
 
-            f"Ancho máximo: "
+            f"Maximum width: "
             f"{parametros.max_width_mm:.2f} mm\n"
 
-            f"Altura máxima: "
+            f"Maximum height: "
             f"{parametros.max_height_mm:.2f} mm\n\n"
 
-            f"Área superficial: "
+            f"Surface area: "
             f"{propiedades.area_superficial_m2:.3f} m²\n"
 
-            f"Modelo de masa: "
+            f"Mass model: "
             f"{modelo_texto}\n"
 
             f"{detalle_espesor}"
@@ -1750,18 +1755,18 @@ class MainWindow(QMainWindow):
             f"{etiqueta_volumen}: "
             f"{propiedades.volumen_m3:.6f} m³\n"
 
-            f"Densidad: "
+            f"Density: "
             f"{propiedades.densidad_kg_m3:.1f} kg/m³\n"
 
-            f"Masa estimada: "
+            f"Estimated mass: "
             f"{propiedades.masa_kg:.3f} kg\n\n"
 
-            "Centro de gravedad:\n"
+            "Center of gravity:\n"
             f"X = {propiedades.cg_x_mm:.2f} mm\n"
             f"Y = {propiedades.cg_y_mm:.2f} mm\n"
             f"Z = {propiedades.cg_z_mm:.2f} mm\n\n"
 
-            "Momentos de inercia:\n"
+            "Moments of inertia:\n"
             f"Ixx = "
             f"{propiedades.inercia_xx_kg_m2:.3f} kg·m²\n"
             f"Iyy = "
@@ -1779,59 +1784,59 @@ class MainWindow(QMainWindow):
 
         if propiedades is None:
             self.etiqueta_resultados.setText(
-                "La góndola todavía no tiene resultados."
+                "This nacelle has no results yet."
             )
             return
 
         parametros = componente.parametros
 
         if propiedades.modelo_masa == "carcasa":
-            modelo_texto = "Carcasa aproximada"
+            modelo_texto = "Approximate shell"
             detalle_espesor = (
-                f"Espesor para masa: "
+                f"Mass-model thickness: "
                 f"{propiedades.espesor_mm:.2f} mm\n"
             )
             etiqueta_volumen = (
-                "Volumen aproximado de material"
+                "Approximate material volume"
             )
         else:
-            modelo_texto = "Volumen real de pared"
+            modelo_texto = "Actual wall volume"
             detalle_espesor = (
-                f"Espesor geométrico: "
+                f"Geometric thickness: "
                 f"{parametros.wall_thickness_mm:.2f} mm\n"
             )
             etiqueta_volumen = (
-                "Volumen real de material"
+                "Actual material volume"
             )
 
         self.etiqueta_resultados.setText(
-            f"Nombre: {componente.nombre}\n"
-            f"Tipo: {componente.tipo}\n"
-            f"Estado válido: "
+            f"Name: {componente.nombre}\n"
+            f"Type: {display_label(componente.tipo)}\n"
+            f"Valid: "
             f"{componente.valido}\n\n"
 
-            f"Longitud: "
+            f"Length: "
             f"{parametros.length_mm:.2f} mm\n"
 
-            f"Diámetro de entrada: "
+            f"Inlet diameter: "
             f"{parametros.inlet_diameter_mm:.2f} mm\n"
 
-            f"Diámetro máximo: "
+            f"Maximum diameter: "
             f"{parametros.max_diameter_mm:.2f} mm\n"
 
-            f"Diámetro de salida: "
+            f"Outlet diameter: "
             f"{parametros.outlet_diameter_mm:.2f} mm\n"
 
-            f"Espesor de pared: "
+            f"Wall thickness: "
             f"{parametros.wall_thickness_mm:.2f} mm\n"
 
-            f"Posición del diámetro máximo: "
+            f"Maximum-diameter station: "
             f"{parametros.max_diameter_position_ratio * 100.0:.1f} %\n\n"
 
-            f"Área superficial: "
+            f"Surface area: "
             f"{propiedades.area_superficial_m2:.3f} m²\n"
 
-            f"Modelo de masa: "
+            f"Mass model: "
             f"{modelo_texto}\n"
 
             f"{detalle_espesor}"
@@ -1839,18 +1844,18 @@ class MainWindow(QMainWindow):
             f"{etiqueta_volumen}: "
             f"{propiedades.volumen_m3:.6f} m³\n"
 
-            f"Densidad: "
+            f"Density: "
             f"{propiedades.densidad_kg_m3:.1f} kg/m³\n"
 
-            f"Masa estimada: "
+            f"Estimated mass: "
             f"{propiedades.masa_kg:.3f} kg\n\n"
 
-            "Centro de gravedad:\n"
+            "Center of gravity:\n"
             f"X = {propiedades.cg_x_mm:.2f} mm\n"
             f"Y = {propiedades.cg_y_mm:.2f} mm\n"
             f"Z = {propiedades.cg_z_mm:.2f} mm\n\n"
 
-            "Momentos de inercia:\n"
+            "Moments of inertia:\n"
             f"Ixx = "
             f"{propiedades.inercia_xx_kg_m2:.3f} kg·m²\n"
             f"Iyy = "
@@ -2199,10 +2204,10 @@ class MainWindow(QMainWindow):
             if not componentes:
                 QMessageBox.warning(
                     self,
-                    "Sin propiedades",
+                    "No properties",
                     (
-                        "No existen componentes válidos "
-                        "con propiedades físicas."
+                        "There are no valid components "
+                        "with physical properties."
                     ),
                 )
                 return
@@ -2213,7 +2218,7 @@ class MainWindow(QMainWindow):
                 lineas_componentes.append(
                     (
                         f"- {componente['nombre']} "
-                        f"[{componente['tipo']}]: "
+                        f"[{display_label(componente['tipo'])}]: "
                         f"{componente['masa_kg']:.3f} kg"
                     )
                 )
@@ -2223,15 +2228,14 @@ class MainWindow(QMainWindow):
             )
 
             mensaje = (
-                "PROPIEDADES GLOBALES DEL MODELO\n\n"
-                f"Masa total: "
+                "GLOBAL MODEL PROPERTIES\n\n"
+                f"Total mass: "
                 f"{resultado['masa_total_kg']:.3f} kg\n\n"
-                "Centro de gravedad global:\n"
+                "Global center of gravity:\n"
                 f"X = {resultado['cg_x_mm']:.2f} mm\n"
                 f"Y = {resultado['cg_y_mm']:.2f} mm\n"
                 f"Z = {resultado['cg_z_mm']:.2f} mm\n\n"
-                "Momentos de inercia respecto "
-                "al CG global:\n"
+                "Moments of inertia about the global CG:\n"
                 f"Ixx = "
                 f"{resultado['inercia_xx_kg_m2']:.3f} "
                 "kg*m^2\n"
@@ -2241,21 +2245,21 @@ class MainWindow(QMainWindow):
                 f"Izz = "
                 f"{resultado['inercia_zz_kg_m2']:.3f} "
                 "kg*m^2\n\n"
-                "Desglose por componente:\n"
+                "Component breakdown:\n"
                 f"{desglose}"
             )
 
             QMessageBox.information(
                 self,
-                "Propiedades globales",
+                "Global properties",
                 mensaje,
             )
 
         except Exception as error:
             QMessageBox.critical(
                 self,
-                "Error de propiedades globales",
-                str(error),
+                "Global properties error",
+                display_error(error),
             )
 
     def exportar_objeto(self):
@@ -2267,8 +2271,8 @@ class MainWindow(QMainWindow):
         ):
             QMessageBox.warning(
                 self,
-                "Sin geometría",
-                "Selecciona un objeto válido.",
+                "No geometry",
+                "Select a valid object.",
             )
             return
 
@@ -2294,9 +2298,10 @@ class MainWindow(QMainWindow):
 
         archivo, _ = QFileDialog.getSaveFileName(
             self,
-            "Exportar objeto a STEP",
+            "Export object to STEP",
             str(archivo_sugerido),
-            "Archivo STEP (*.step *.stp)",
+            "STEP file (*.step *.stp)",
+            options=QFileDialog.Option.DontUseNativeDialog,
         )
 
         if not archivo:
@@ -2315,15 +2320,15 @@ class MainWindow(QMainWindow):
 
             QMessageBox.information(
                 self,
-                "Exportación completada",
-                f"Archivo guardado en:\n{ruta}",
+                "Export complete",
+                f"File saved to:\n{ruta}",
             )
 
         except Exception as error:
             QMessageBox.critical(
                 self,
-                "Error de exportación",
-                str(error),
+                "Export error",
+                display_error(error),
             )
     def exportar_proyecto_completo(self):
         """Exporta todos los componentes válidos a un STEP."""
@@ -2341,8 +2346,8 @@ class MainWindow(QMainWindow):
                 ]
 
                 raise RuntimeError(
-                    "No se puede exportar el proyecto "
-                    "porque algunos componentes tienen errores:\n\n"
+                    "The project cannot be exported "
+                    "because some components have errors:\n\n"
                     + "\n".join(mensajes)
                 )
 
@@ -2369,9 +2374,9 @@ class MainWindow(QMainWindow):
             if not geometrias:
                 QMessageBox.warning(
                     self,
-                    "Proyecto sin geometría",
-                    "El proyecto no contiene componentes "
-                    "válidos para exportar.",
+                    "Project has no geometry",
+                    "The project contains no "
+                    "valid components to export.",
                 )
                 return
 
@@ -2386,14 +2391,15 @@ class MainWindow(QMainWindow):
 
             archivo_sugerido = (
                 carpeta
-                / "proyecto_completo.step"
+                / "aircraft_multibody.step"
             )
 
             archivo, _ = QFileDialog.getSaveFileName(
                 self,
-                "Exportar proyecto completo a STEP",
+                "Export project as STEP part",
                 str(archivo_sugerido),
-                "Archivo STEP (*.step *.stp)",
+                "STEP file (*.step *.stp)",
+                options=QFileDialog.Option.DontUseNativeDialog,
             )
 
             if not archivo:
@@ -2411,19 +2417,19 @@ class MainWindow(QMainWindow):
 
             QMessageBox.information(
                 self,
-                "Exportación completada",
+                "Export complete",
                 (
-                    f"Proyecto exportado correctamente.\n\n"
-                    f"Componentes exportados: {cantidad}\n"
-                    f"Archivo:\n{ruta}"
+                    f"Project exported successfully.\n\n"
+                    f"Components exported: {cantidad}\n"
+                    f"File:\n{ruta}"
                 ),
             )
 
         except Exception as error:
             QMessageBox.critical(
                 self,
-                "Error al exportar el proyecto",
-                str(error),
+                "Unable to export project",
+                display_error(error),
             )
     def closeEvent(self, evento):
         """Cierra correctamente VTK."""

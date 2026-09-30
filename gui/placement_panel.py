@@ -21,7 +21,7 @@ class PlacementPanel(QGroupBox):
     aplicar_solicitado = Signal(object)
 
     def __init__(self, parent=None):
-        super().__init__("Posición y orientación", parent)
+        super().__init__("Position and orientation", parent)
 
         self._creando_interfaz = True
 
@@ -33,8 +33,8 @@ class PlacementPanel(QGroupBox):
         self.pitch_control = self._crear_control_angulo()
         self.yaw_control = self._crear_control_angulo()
 
-        self.boton_aplicar = QPushButton("Aplicar posición")
-        self.boton_restablecer = QPushButton("Restablecer")
+        self.boton_aplicar = QPushButton("Apply position")
+        self.boton_restablecer = QPushButton("Reset")
 
         self._construir_interfaz()
         self._conectar_eventos()

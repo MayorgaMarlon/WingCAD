@@ -1,0 +1,217 @@
+{
+  "formato": "WingCAD",
+  "version": 1,
+  "documento": {
+    "nombre": "Orbit - closed box-wing concept",
+    "objetos": [
+      {
+        "id": "5f8182ed-4da9-519b-854d-a850c3ddab9d",
+        "clave": "fuselage",
+        "nombre": "Box-wing fuselage",
+        "visible": true,
+        "placement": {
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 5200,
+          "max_width_mm": 900,
+          "max_height_mm": 1200,
+          "nose_ratio": 0.22,
+          "tail_ratio": 0.35,
+          "nose_roundness": 1.0,
+          "tail_roundness": 1.45,
+          "tail_end_ratio": 0.02,
+          "num_sections": 22
+        }
+      },
+      {
+        "id": "ed6be85d-c9c6-56e8-a960-ca0a7332ea51",
+        "clave": "wing",
+        "nombre": "Lower wing",
+        "visible": true,
+        "placement": {
+          "x_mm": 1600.0,
+          "y_mm": 0.0,
+          "z_mm": -450.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 1000,
+          "cuerda_punta_mm": 700,
+          "semi_span_mm": 3500,
+          "flecha_grados": 0,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "8e78f51e-5309-5ada-abf1-7c722ce13e31",
+        "clave": "wing",
+        "nombre": "Upper wing",
+        "visible": true,
+        "placement": {
+          "x_mm": 1600.0,
+          "y_mm": 0.0,
+          "z_mm": 450.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 1000,
+          "cuerda_punta_mm": 700,
+          "semi_span_mm": 3500,
+          "flecha_grados": 0,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "40a4b430-1af3-5d9e-b1c7-6855b7a602e9",
+        "clave": "wing",
+        "nombre": "Port tip connector",
+        "visible": true,
+        "placement": {
+          "x_mm": 1600.0,
+          "y_mm": -3500.0,
+          "z_mm": -450.0,
+          "roll_deg": 90.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 700,
+          "cuerda_punta_mm": 700,
+          "semi_span_mm": 900,
+          "flecha_grados": 0,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "semiala_positiva"
+      },
+      {
+        "id": "82847eee-0266-592e-9c05-321ed9a7da03",
+        "clave": "wing",
+        "nombre": "Starboard tip connector",
+        "visible": true,
+        "placement": {
+          "x_mm": 1600.0,
+          "y_mm": 3500.0,
+          "z_mm": -450.0,
+          "roll_deg": 90.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 700,
+          "cuerda_punta_mm": 700,
+          "semi_span_mm": 900,
+          "flecha_grados": 0,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "semiala_positiva"
+      },
+      {
+        "id": "d8888254-d74c-5e19-bd90-683a88e914e1",
+        "clave": "wing",
+        "nombre": "Box-wing tailplane",
+        "visible": true,
+        "placement": {
+          "x_mm": 4250.0,
+          "y_mm": 0.0,
+          "z_mm": 200.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 650,
+          "cuerda_punta_mm": 300,
+          "semi_span_mm": 1200,
+          "flecha_grados": 10,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "06397d68-276d-5e8a-a6f2-8cfab0490f3b",
+        "clave": "wing",
+        "nombre": "Box-wing fin",
+        "visible": true,
+        "placement": {
+          "x_mm": 4050.0,
+          "y_mm": 0.0,
+          "z_mm": 180.0,
+          "roll_deg": 90.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 850,
+          "cuerda_punta_mm": 300,
+          "semi_span_mm": 1000,
+          "flecha_grados": 20,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "semiala_positiva"
+      }
+    ]
+  }
+}

@@ -1,5 +1,7 @@
 """Panel de propiedades para componentes de tipo ala."""
 
+from gui.display_text import display_label
+
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import (
     QComboBox,
@@ -70,7 +72,7 @@ class WingPanel(QWidget):
             grupo_identificacion
         )
 
-        self.entrada_nombre = QLineEdit("Ala principal")
+        self.entrada_nombre = QLineEdit("Main wing")
 
         formulario_identificacion.addRow(
             "Name:",
@@ -90,18 +92,18 @@ class WingPanel(QWidget):
         )
 
         self.entrada_modo_superficie.addItem(
-            "Negative half-wing",
+            "Positive half-wing",
             "semiala_positiva",
         )
 
         self.entrada_modo_superficie.addItem(
-            "Semiala negativa",
+            "Negative half-wing",
             "semiala_negativa",
         )
 
         self.entrada_modo_superficie.setToolTip(
-            "Use una Negative half-wing para una deriva vertical. "
-            "El Placement define después su orientación."
+            "Use a positive half-wing for a vertical stabilizer. "
+            "Set its orientation in the placement panel."
         )
 
         formulario_tipo.addRow(
@@ -196,7 +198,7 @@ class WingPanel(QWidget):
         )
 
         formulario_angulos.addRow(
-            "Flecha:",
+            "Sweep:",
             self.entrada_flecha,
         )
 
@@ -222,13 +224,13 @@ class WingPanel(QWidget):
         self.entrada_secciones.setValue(10)
         self.entrada_material = QComboBox()
         self.entrada_material.addItem(
-            "Personalizado",
+            "Custom",
             None,
         )
 
         for material in listar_materiales():
             self.entrada_material.addItem(
-                material.nombre,
+                display_label(material.nombre),
                 material.identificador,
             )
 
@@ -250,8 +252,8 @@ class WingPanel(QWidget):
             "solido",
         )
         self.entrada_modelo_masa.addItem(
-            "Shell de pared delgada",
-            "Shell",
+            "Thin-walled shell",
+            "carcasa",
         )
 
         self.entrada_espesor = self._crear_decimal(
@@ -379,9 +381,9 @@ class WingPanel(QWidget):
     def leer_nombre(self):
         nombre = self.entrada_nombre.text().strip()
 
-        if not Name:
+        if not nombre:
             raise ValueError(
-                "El nombre de la superficie no puede estar vacío."
+                "The surface name cannot be empty."
             )
 
         return nombre
@@ -445,7 +447,7 @@ class WingPanel(QWidget):
     def _actualizar_estado_espesor(self, *_):
         es_Shell = (
             self.leer_modelo_masa()
-            == "Shell"
+            == "carcasa"
         )
         self.entrada_espesor.setEnabled(
             es_Shell
@@ -453,7 +455,7 @@ class WingPanel(QWidget):
     def establecer_componente(self, componente):
         if not isinstance(componente, WingComponent):
             raise TypeError(
-                "El panel solo admite componentes de tipo ala."
+                "This panel only supports wing components."
             )
 
         self.componente = componente
@@ -534,6 +536,6 @@ class WingPanel(QWidget):
     def limpiar_componente(self):
         self.componente = None
 
-        self.entrada_nombre.setText("Nueva ala")
+        self.entrada_nombre.setText("New wing")
 
         self.entrada_modo_superficie.setCurrentIndex(0)

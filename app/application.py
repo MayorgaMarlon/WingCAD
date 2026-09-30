@@ -9,6 +9,7 @@ from components.fuselage import FuselageComponent
 from components.nacelle import NacelleComponent
 from components.wing import WingComponent
 from core.fuselage_parameters import FuselageParameters
+from core.nacelle_parameters import NacelleParameters
 from core.parameters import WingParameters
 from geometry.placement import Placement
 

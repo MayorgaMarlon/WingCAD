@@ -1,5 +1,7 @@
 """Panel gráfico para editar un fuselaje paramétrico."""
 
+from gui.display_text import display_label
+
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import (
     QDoubleSpinBox,
@@ -102,7 +104,7 @@ class FuselagePanel(QWidget):
         )
 
         self.nombre_control = QLineEdit(
-            "Fuselaje principal"
+            "Main fuselage"
         )
 
         formulario_identificacion.addRow(
@@ -279,13 +281,13 @@ class FuselagePanel(QWidget):
         )
         self.material_control = QComboBox()
         self.material_control.addItem(
-            "Personalizado",
+            "Custom",
             None,
         )
 
         for material in listar_materiales():
             self.material_control.addItem(
-                material.nombre,
+                display_label(material.nombre),
                 material.identificador,
             )
 
@@ -330,7 +332,7 @@ class FuselagePanel(QWidget):
             "solido",
         )
         self.modelo_masa_control.addItem(
-            "Shell de pared delgada",
+            "Thin-walled shell",
             "carcasa",
         )
 
@@ -470,10 +472,9 @@ class FuselagePanel(QWidget):
             .strip()
         )
 
-        if not Name:
+        if not nombre:
             raise ValueError(
-                "El nombre del fuselaje "
-                "no puede estar vacío."
+                "The fuselage name cannot be empty."
             )
 
         return nombre
@@ -526,8 +527,7 @@ class FuselagePanel(QWidget):
 
         if densidad <= 0.0:
             raise ValueError(
-                "La densidad debe ser "
-                "mayor que cero."
+                "Density must be greater than zero."
             )
 
         return densidad
@@ -545,8 +545,7 @@ class FuselagePanel(QWidget):
 
         if espesor <= 0.0:
             raise ValueError(
-                "El espesor debe ser "
-                "mayor que cero."
+                "Thickness must be greater than zero."
             )
 
         return espesor
@@ -605,7 +604,7 @@ class FuselagePanel(QWidget):
     ):
         es_carcasa = (
             self.leer_modelo_masa()
-            == "Shell"
+            == "carcasa"
         )
 
         self.espesor_control.setEnabled(

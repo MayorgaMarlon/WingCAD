@@ -1,0 +1,213 @@
+{
+  "formato": "WingCAD",
+  "version": 1,
+  "documento": {
+    "nombre": "Kestrel - twin-boom UAV",
+    "objetos": [
+      {
+        "id": "4b4a458a-e857-5795-a418-4a9e7fda4377",
+        "clave": "fuselage",
+        "nombre": "Central pod",
+        "visible": true,
+        "placement": {
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 2700,
+          "max_width_mm": 700,
+          "max_height_mm": 650,
+          "nose_ratio": 0.22,
+          "tail_ratio": 0.35,
+          "nose_roundness": 1.0,
+          "tail_roundness": 1.45,
+          "tail_end_ratio": 0.02,
+          "num_sections": 22
+        }
+      },
+      {
+        "id": "ecf40724-3b52-5aac-965d-dc8802fa20f0",
+        "clave": "wing",
+        "nombre": "UAV main wing",
+        "visible": true,
+        "placement": {
+          "x_mm": 1000.0,
+          "y_mm": 0.0,
+          "z_mm": 180.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "2412",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 1200,
+          "cuerda_punta_mm": 600,
+          "semi_span_mm": 4000,
+          "flecha_grados": 4,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "ae30b902-faf5-523f-91bc-5f8df18a2b9d",
+        "clave": "fuselage",
+        "nombre": "Port tail boom",
+        "visible": true,
+        "placement": {
+          "x_mm": 1400.0,
+          "y_mm": -1600.0,
+          "z_mm": 200.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 3500,
+          "max_width_mm": 180,
+          "max_height_mm": 220,
+          "nose_ratio": 0.22,
+          "tail_ratio": 0.35,
+          "nose_roundness": 1.0,
+          "tail_roundness": 1.45,
+          "tail_end_ratio": 0.02,
+          "num_sections": 22
+        }
+      },
+      {
+        "id": "1ab5bffe-3cff-51cf-b3bd-fe3a454dc161",
+        "clave": "fuselage",
+        "nombre": "Starboard tail boom",
+        "visible": true,
+        "placement": {
+          "x_mm": 1400.0,
+          "y_mm": 1600.0,
+          "z_mm": 200.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 3500,
+          "max_width_mm": 180,
+          "max_height_mm": 220,
+          "nose_ratio": 0.22,
+          "tail_ratio": 0.35,
+          "nose_roundness": 1.0,
+          "tail_roundness": 1.45,
+          "tail_end_ratio": 0.02,
+          "num_sections": 22
+        }
+      },
+      {
+        "id": "57acd8a4-f89d-5d11-aab2-d4ae186845aa",
+        "clave": "wing",
+        "nombre": "Connecting tailplane",
+        "visible": true,
+        "placement": {
+          "x_mm": 4200.0,
+          "y_mm": 0.0,
+          "z_mm": 200.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 600,
+          "cuerda_punta_mm": 600,
+          "semi_span_mm": 1700,
+          "flecha_grados": 0,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "86a58aaf-c86c-53f9-914c-803aa714c660",
+        "clave": "wing",
+        "nombre": "Port fin",
+        "visible": true,
+        "placement": {
+          "x_mm": 4050.0,
+          "y_mm": -1600.0,
+          "z_mm": 200.0,
+          "roll_deg": 90.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 700,
+          "cuerda_punta_mm": 300,
+          "semi_span_mm": 850,
+          "flecha_grados": 15,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "semiala_positiva"
+      },
+      {
+        "id": "99c327a0-e974-51e1-bbd2-d0c2d7545321",
+        "clave": "wing",
+        "nombre": "Starboard fin",
+        "visible": true,
+        "placement": {
+          "x_mm": 4050.0,
+          "y_mm": 1600.0,
+          "z_mm": 200.0,
+          "roll_deg": 90.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 700,
+          "cuerda_punta_mm": 300,
+          "semi_span_mm": 850,
+          "flecha_grados": 15,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "semiala_positiva"
+      }
+    ]
+  }
+}

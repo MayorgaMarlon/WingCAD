@@ -1,5 +1,7 @@
 """Árbol de objetos del documento CAD."""
 
+from gui.display_text import display_label, display_error
+
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QColor, QBrush
 from PySide6.QtWidgets import (
@@ -25,7 +27,7 @@ class DocumentTree(QTreeWidget):
         self.elemento_raiz = None
 
         self.setColumnCount(1)
-        self.setHeaderLabel("Documento")
+        self.setHeaderLabel("Document")
 
         self.setAlternatingRowColors(True)
         self.setMinimumHeight(150)
@@ -55,7 +57,7 @@ class DocumentTree(QTreeWidget):
             return
 
         self.elemento_raiz = QTreeWidgetItem(
-            [self.documento.nombre]
+            [display_label(self.documento.nombre)]
         )
 
         self.elemento_raiz.setData(
@@ -86,7 +88,7 @@ class DocumentTree(QTreeWidget):
 
         texto = (
             f"{objeto.nombre} "
-            f"[{objeto.tipo}]"
+            f"[{display_label(objeto.tipo)}]"
         )
 
         elemento = QTreeWidgetItem(
@@ -129,7 +131,7 @@ class DocumentTree(QTreeWidget):
 
             elemento.setToolTip(
                 0,
-                objeto.error,
+                display_error(objeto.error),
             )
 
         elif objeto.modificado:
@@ -140,7 +142,7 @@ class DocumentTree(QTreeWidget):
 
             elemento.setToolTip(
                 0,
-                "El objeto necesita recalcularse.",
+                "The object needs to be rebuilt.",
             )
 
         elif objeto.valido:
@@ -151,7 +153,7 @@ class DocumentTree(QTreeWidget):
 
             elemento.setToolTip(
                 0,
-                "Geometría válida.",
+                "Valid geometry.",
             )
 
     def _seleccion_cambiada(

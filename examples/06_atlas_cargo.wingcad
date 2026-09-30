@@ -1,0 +1,127 @@
+{
+  "formato": "WingCAD",
+  "version": 1,
+  "documento": {
+    "nombre": "Atlas - high-wing cargo transport",
+    "objetos": [
+      {
+        "id": "a83e0a36-594e-50a1-a550-5d991dc7cdf3",
+        "clave": "fuselage",
+        "nombre": "Cargo fuselage",
+        "visible": true,
+        "placement": {
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 2.0,
+        "parametros": {
+          "length_mm": 18000,
+          "max_width_mm": 2500,
+          "max_height_mm": 2700,
+          "nose_ratio": 0.22,
+          "tail_ratio": 0.35,
+          "nose_roundness": 1.0,
+          "tail_roundness": 1.45,
+          "tail_end_ratio": 0.02,
+          "num_sections": 22
+        }
+      },
+      {
+        "id": "f19ef3c7-44b6-5aab-b337-b6cef86b46eb",
+        "clave": "wing",
+        "nombre": "Cargo high wing",
+        "visible": true,
+        "placement": {
+          "x_mm": 6000.0,
+          "y_mm": 0.0,
+          "z_mm": 1250.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "2412",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 3200,
+          "cuerda_punta_mm": 1800,
+          "semi_span_mm": 10000,
+          "flecha_grados": 4,
+          "diedro_grados": 2,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "simetrica"
+      },
+      {
+        "id": "3aab106f-e00b-515e-868e-09c4356f2220",
+        "clave": "wing",
+        "nombre": "Cargo fin",
+        "visible": true,
+        "placement": {
+          "x_mm": 14300.0,
+          "y_mm": 0.0,
+          "z_mm": 650.0,
+          "roll_deg": 90.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 2200,
+          "cuerda_punta_mm": 900,
+          "semi_span_mm": 2400,
+          "flecha_grados": 20,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "semiala_positiva"
+      },
+      {
+        "id": "934f1280-1935-52e7-aef7-ea3f76c3f913",
+        "clave": "wing",
+        "nombre": "Cargo T-tail",
+        "visible": true,
+        "placement": {
+          "x_mm": 15300.0,
+          "y_mm": 0.0,
+          "z_mm": 2850.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "0012",
+          "perfil_punta": "0012",
+          "cuerda_raiz_mm": 1600,
+          "cuerda_punta_mm": 800,
+          "semi_span_mm": 3500,
+          "flecha_grados": 10,
+          "diedro_grados": 0,
+          "torsion_punta_grados": 0,
+          "numero_puntos": 60,
+          "numero_secciones": 12
+        },
+        "modo_superficie": "simetrica"
+      }
+    ]
+  }
+}
