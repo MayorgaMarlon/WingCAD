@@ -32,8 +32,9 @@ from components.fuselage import FuselageComponent
 from components.nacelle import NacelleComponent
 from components.wing import WingComponent
 from core.exporter import (
-    exportar_proyecto_step,
-    exportar_step,
+    EXPORT_FILTERS,
+    exportar_proyecto,
+    exportar_geometria,
 )
 from core.viewer import convertir_shape_a_vtk
 from gui.component_panels.fuselage_panel import FuselagePanel
@@ -374,19 +375,26 @@ class MainWindow(QMainWindow):
         # -----------------------------------------------------
 
         self.boton_exportar = QPushButton(
-            "Export selected object to STEP"
+            "Export selected object..."
         )
         self.boton_exportar.setMinimumHeight(38)
+        self.boton_exportar.setToolTip(
+            "Choose STEP or BREP for CAD, STL for printing, GLB or OBJ for visualization."
+        )
         self.boton_exportar.setEnabled(False)
         self.boton_exportar.clicked.connect(
             self.exportar_objeto
         )
 
         self.boton_exportar_proyecto = QPushButton(
-            "Export project as STEP part"
+            "Export project..."
         )
         self.boton_exportar_proyecto.setMinimumHeight(
             42
+        )
+        self.boton_exportar_proyecto.setToolTip(
+            "Export all valid components. STEP is exported as a multibody part. "
+            "STL keeps overlapping bodies; it does not join them for printing."
         )
         self.boton_exportar_proyecto.clicked.connect(
             self.exportar_proyecto_completo
@@ -2262,12 +2270,40 @@ class MainWindow(QMainWindow):
                 display_error(error),
             )
 
+    def _elegir_archivo_exportacion(self, sugerido, titulo):
+        """Select format and confirm the final filename before overwriting."""
+        archivo, filtro = QFileDialog.getSaveFileName(
+            self,
+            titulo,
+            str(sugerido.with_suffix("")),
+            ";;".join(EXPORT_FILTERS),
+            options=QFileDialog.Option.DontUseNativeDialog,
+        )
+        if not archivo:
+            return None
+        extension = EXPORT_FILTERS.get(filtro, "step")
+        ruta = Path(archivo)
+        permitidas = (".step", ".stp") if extension == "step" else ("." + extension,)
+        if ruta.suffix.lower() not in permitidas:
+            ruta = ruta.with_suffix("." + extension)
+            if ruta.exists():
+                respuesta = QMessageBox.question(
+                    self, "Replace file?",
+                    f"The file already exists:\n{ruta}\n\nReplace it?",
+                    QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+                    QMessageBox.StandardButton.No,
+                )
+                if respuesta != QMessageBox.StandardButton.Yes:
+                    return None
+        return ruta
+
     def exportar_objeto(self):
-        """Exporta el objeto seleccionado a STEP."""
+        """Exporta el objeto seleccionado en el formato elegido."""
 
         if (
             self.objeto_actual is None
             or self.objeto_actual.shape is None
+            or not self.objeto_actual.valido
         ):
             QMessageBox.warning(
                 self,
@@ -2296,26 +2332,16 @@ class MainWindow(QMainWindow):
             / f"{nombre_archivo}.step"
         )
 
-        archivo, _ = QFileDialog.getSaveFileName(
-            self,
-            "Export object to STEP",
-            str(archivo_sugerido),
-            "STEP file (*.step *.stp)",
-            options=QFileDialog.Option.DontUseNativeDialog,
-        )
-
-        if not archivo:
-            return
-
-        if not archivo.lower().endswith(
-            (".step", ".stp")
-        ):
-            archivo += ".step"
-
         try:
-            ruta = exportar_step(
+            archivo = self._elegir_archivo_exportacion(
+                archivo_sugerido, "Export selected object"
+            )
+            if archivo is None:
+                return
+            ruta = exportar_geometria(
                 self.objeto_actual.shape,
                 archivo,
+                self.objeto_actual.nombre,
             )
 
             QMessageBox.information(
@@ -2331,7 +2357,7 @@ class MainWindow(QMainWindow):
                 display_error(error),
             )
     def exportar_proyecto_completo(self):
-        """Exporta todos los componentes válidos a un STEP."""
+        """Exporta todos los componentes válidos en el formato elegido."""
 
         try:
             errores = (
@@ -2352,6 +2378,7 @@ class MainWindow(QMainWindow):
                 )
 
             geometrias = []
+            nombres = []
 
             for objeto in (
                 self.aplicacion
@@ -2370,6 +2397,7 @@ class MainWindow(QMainWindow):
                 geometrias.append(
                     objeto.shape
                 )
+                nombres.append(objeto.nombre)
 
             if not geometrias:
                 QMessageBox.warning(
@@ -2394,25 +2422,15 @@ class MainWindow(QMainWindow):
                 / "aircraft_multibody.step"
             )
 
-            archivo, _ = QFileDialog.getSaveFileName(
-                self,
-                "Export project as STEP part",
-                str(archivo_sugerido),
-                "STEP file (*.step *.stp)",
-                options=QFileDialog.Option.DontUseNativeDialog,
+            archivo = self._elegir_archivo_exportacion(
+                archivo_sugerido, "Export project"
             )
-
-            if not archivo:
+            if archivo is None:
                 return
-
-            if not archivo.lower().endswith(
-                (".step", ".stp")
-            ):
-                archivo += ".step"
-
-            ruta, cantidad = exportar_proyecto_step(
+            ruta, cantidad = exportar_proyecto(
                 geometrias,
                 archivo,
+                nombres,
             )
 
             QMessageBox.information(
