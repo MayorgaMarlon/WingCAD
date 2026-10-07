@@ -119,8 +119,10 @@ class WingPanel(QWidget):
         self.entrada_perfil_raiz = QLineEdit("2412")
         self.entrada_perfil_punta = QLineEdit("2412")
 
-        self.entrada_perfil_raiz.setMaxLength(4)
-        self.entrada_perfil_punta.setMaxLength(4)
+        self.entrada_perfil_raiz.setMaxLength(7)
+        self.entrada_perfil_punta.setMaxLength(7)
+        self.entrada_perfil_raiz.setToolTip("NACA four digits, RAE101, or RAE101F (benchmark: both profiles, 25 points)")
+        self.entrada_perfil_punta.setToolTip("NACA four digits, RAE101, or RAE101F (benchmark: both profiles, 25 points)")
 
         formulario_perfiles.addRow(
             "Root airfoil:",

@@ -1,7 +1,9 @@
 # Complete aircraft examples
 
 Use **Open project** in WingCAD, then **Fit** to frame the aircraft.
-These projects contain complete external configurations, not isolated components.
+Projects 01–07 contain complete external configurations. Project 08 is the
+isolated swept-wing benchmark requested for comparison with FLOWPanel.
+Project 09 reproduces the tutorial's structured discretization through WingCAD.
 
 | Project | Configuration |
 | --- | --- |
@@ -12,8 +14,15 @@ These projects contain complete external configurations, not isolated components
 | [05_orbit_box_wing.wingcad](05_orbit_box_wing.wingcad) | 7 m span box-wing concept with upper/lower wings and vertical tip connectors. |
 | [06_atlas_cargo.wingcad](06_atlas_cargo.wingcad) | 18 m long cargo transport with a 20 m span high wing and T-tail. |
 | [07_aurora_airliner.wingcad](07_aurora_airliner.wingcad) | 28 m long regional airliner with a 25 m span swept wing, two pylons and hollow nacelles. |
+| [08_weber_swept_wing.wingcad](08_weber_swept_wing.wingcad) | Weber benchmark: RAE101, 2489.2 mm span, 497.84 mm constant chord, 45° sweep, zero twist/dihedral. See [comparison workflow](../analysis/flowpanel/sweptwing/README.md). |
 
 ## Reference and implementation
+
+`09_weber_matched_reference.wingcad` is the matched Weber benchmark (RAE101F,
+25 points per side, interpolating CAD sections). See the [matched comparison
+workflow](../analysis/flowpanel/sweptwing/MATCHED.md) for the headless simulation
+commands and pressure/load plots. The general Manta GUI mesh adapter does not
+run this structured benchmark.
 
 The aircraft example categories in the supplied `AeroShape.zip` guided this
 collection. All new dimensions and assemblies were defined for WingCAD's own

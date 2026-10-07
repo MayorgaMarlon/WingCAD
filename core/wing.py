@@ -10,11 +10,11 @@ from OCP.BRepBuilderAPI import (
 )
 from OCP.BRepCheck import BRepCheck_Analyzer
 from OCP.BRepOffsetAPI import BRepOffsetAPI_ThruSections
-from OCP.GeomAPI import GeomAPI_PointsToBSpline
-from OCP.TColgp import TColgp_Array1OfPnt
+from OCP.GeomAPI import GeomAPI_PointsToBSpline, GeomAPI_Interpolate
+from OCP.TColgp import TColgp_Array1OfPnt, TColgp_HArray1OfPnt
 from OCP.gp import gp_Ax2, gp_Dir, gp_Pnt, gp_Trsf
 
-from core.naca import puntos_naca4
+from core.airfoils import airfoil_points
 from core.parameters import WingParameters
 
 
@@ -67,13 +67,13 @@ class WingBuilder:
     def _obtener_perfil_interpolado(self, cuerda, factor):
         p = self.parametros
 
-        superior_raiz, inferior_raiz = puntos_naca4(
+        superior_raiz, inferior_raiz = airfoil_points(
             codigo=p.perfil_raiz,
             cuerda=cuerda,
             numero_puntos=p.numero_puntos,
         )
 
-        superior_punta, inferior_punta = puntos_naca4(
+        superior_punta, inferior_punta = airfoil_points(
             codigo=p.perfil_punta,
             cuerda=cuerda,
             numero_puntos=p.numero_puntos,
@@ -126,8 +126,19 @@ class WingBuilder:
             z_rotado + desplazamiento_z,
         )
 
-    @staticmethod
-    def _crear_curva_bspline(puntos):
+    def _crear_curva_bspline(self, puntos):
+        if "RAE101F" in (self.parametros.perfil_raiz.upper(),
+                          self.parametros.perfil_punta.upper()):
+            # Pass through the published benchmark stations exactly; the usual
+            # approximation can move these nodes and changes the comparison.
+            array = TColgp_HArray1OfPnt(1, len(puntos))
+            for i, point in enumerate(puntos, 1):
+                array.SetValue(i, point)
+            interpolation = GeomAPI_Interpolate(array, False, 1e-9)
+            interpolation.Perform()
+            if not interpolation.IsDone():
+                raise RuntimeError("Could not interpolate benchmark airfoil.")
+            return interpolation.Curve()
         arreglo = TColgp_Array1OfPnt(1, len(puntos))
 
         for indice, punto in enumerate(puntos, start=1):

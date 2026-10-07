@@ -149,7 +149,7 @@ class NacellePanel(QWidget):
             )
         )
 
-        self.espesor_pared_control:control = (
+        self.espesor_pared_control = (
             self._crear_control_dimension(
                 20.0,
                 0.1,

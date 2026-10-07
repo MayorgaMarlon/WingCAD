@@ -28,6 +28,11 @@ class WingParameters:
         self._validar_naca(self.perfil_raiz, "perfil raíz")
         self._validar_naca(self.perfil_punta, "perfil punta")
 
+        if "RAE101F" in (self.perfil_raiz.upper(), self.perfil_punta.upper()):
+            if not (self.perfil_raiz.upper() == self.perfil_punta.upper() == "RAE101F"
+                    and self.numero_puntos == 25):
+                raise ValueError("RAE101F requires both profiles to be RAE101F and 25 points.")
+
         if self.cuerda_raiz_mm <= 0:
             raise ValueError("La cuerda raíz debe ser mayor que cero.")
 
@@ -65,9 +70,11 @@ class WingParameters:
     def _validar_naca(codigo, nombre):
         """Valida un código NACA de cuatro dígitos."""
 
+        if codigo.upper() in {"RAE101", "RAE101F"}:
+            return
         if len(codigo) != 4 or not codigo.isdigit():
             raise ValueError(
-                f"El {nombre} debe ser un código NACA de cuatro dígitos."
+                f"El {nombre} debe ser NACA de cuatro dígitos, RAE101 o RAE101F."
             )
 
     @property

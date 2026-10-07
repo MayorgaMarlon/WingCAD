@@ -1,0 +1,39 @@
+{
+  "formato": "WingCAD",
+  "version": 1,
+  "documento": {
+    "nombre": "Weber swept wing - FLOWPanel comparison",
+    "objetos": [
+      {
+        "id": "weber-rae101-45deg",
+        "clave": "wing",
+        "nombre": "Weber RAE101 swept wing",
+        "visible": true,
+        "placement": {
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "z_mm": 0.0,
+          "roll_deg": 0.0,
+          "pitch_deg": 0.0,
+          "yaw_deg": 0.0
+        },
+        "densidad_kg_m3": 1600.0,
+        "modelo_masa": "carcasa",
+        "espesor_mm": 1.5,
+        "parametros": {
+          "perfil_raiz": "RAE101",
+          "perfil_punta": "RAE101",
+          "cuerda_raiz_mm": 497.84,
+          "cuerda_punta_mm": 497.84,
+          "semi_span_mm": 1244.6,
+          "flecha_grados": 45.0,
+          "diedro_grados": 0.0,
+          "torsion_punta_grados": 0.0,
+          "numero_puntos": 160,
+          "numero_secciones": 3
+        },
+        "modo_superficie": "simetrica"
+      }
+    ]
+  }
+}

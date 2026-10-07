@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>WingCAD independent mesh study</title>
+<style>body{font:17px system-ui;max-width:1200px;margin:35px auto;padding:0 20px;color:#172b40}img{width:100%}table{border-collapse:collapse;width:100%}td,th{padding:12px;border-bottom:1px solid #ccc;text-align:left}.note{background:#fff1d8;padding:20px}</style>
+<h1>Weber wing: independent WingCAD mesh refinement</h1>
+<p>RAE101 · span 2.4892 m · chord 0.49784 m · sweep 45° · 30 m/s · 4.2° · 1.225 kg/m³.</p>
+<p>WingCAD example 08, standard RAE101 interpolation. One fixed STEP for all three meshes.
+No reference mesh nodes or topology are used to generate these meshes. The matched example 09 is not used.</p>
+<table><tr><th>Case</th><th>Panels</th><th>CL</th><th>CD inviscid</th></tr><tr><td>FLOWPanel reference</td><td>2880</td><td>0.271561</td><td>0.006598</td></tr><tr><td>WingCAD coarse</td><td>2806</td><td>0.233826</td><td>0.012776</td></tr><tr><td>WingCAD medium</td><td>6214</td><td>0.250462</td><td>0.011033</td></tr><tr><td>WingCAD fine</td><td>13734</td><td>0.250999</td><td>0.009197</td></tr><tr><td>Experimental</td><td>—</td><td>0.238</td><td>0.005</td></tr></table>
+<p class="note">Fine WingCAD versus tutorial: CL -7.57%, CD +39.39%.
+Convergence has not been established; these differences are not a geometry-only error estimate.</p>
+<p>Successive changes on the same CAD:</p><ul><li>coarse_to_medium: CL +7.11%, CD -13.65%.</li><li>medium_to_fine: CL +0.21%, CD -16.64%.</li></ul>
+<p>Mesh size limits decrease by a factor of 1.5 at each step. CAD/source hashes match;
+mesh hashes differ. Tip caps are removed consistently; all remaining openings are at the tips.
+Parent meshes have positive signed volume and consistent panel orientation. All fields are finite,
+and integrated forces reproduce saved CL/CD. FLOWPanel reports a winding-number warning for the open surface;
+this warning is retained in each solver log, not treated as proof of an inverted mesh.</p>
+<p>Independent geometry measurement: maximum one-way distance to the CAD section
+0.5767 mm, RMS 0.1010 mm
+over 802 points at y = 622.3 mm. This is a sampled sectional distance,
+not a global Hausdorff bound and not an aerodynamic error estimate.</p>
+<p>Both solvers use direct vortex-ring panels and the same rigid wake/conditions. The tutorial has two
+structured half-wing bodies; this adapter uses a connected unstructured mesh. The remaining difference includes
+CAD interpolation, triangulation, gradient reconstruction, body partition and finite resolution of both solutions.
+More refinement alone does not isolate these effects. No coefficients or nodes were tuned to improve agreement.</p>
+<p>Pressure cuts use identical plane intersections for every case, without smoothing; they differ from the
+tutorial's nearest-column plotting procedure. Span forces are conservatively integrated into the same 30 bands.
+Colors are clipped to ±0.5, but numerical pressure data retain the full range.</p>
+<p><a href="comparison.json">Full audit JSON</a> · <a href="pressure_sections.csv">Pressure CSV</a> ·
+<a href="spanwise_loading.csv">Span loads CSV</a> ·
+<a href="https://flow.byu.edu/FLOWPanel.jl/stable/examples/sweptwing-4p2aoa/">Reference tutorial</a></p><h2>Mesh sensitivity</h2><img src="refinement.png" alt="Mesh sensitivity"><h2>Independent geometry audit</h2><img src="profile_geometry.png" alt="Independent geometry audit"><h2>Upper and lower pressure</h2><img src="pressure_top_bottom.png" alt="Upper and lower pressure"><h2>Chordwise pressure</h2><img src="chordwise_cp.png" alt="Chordwise pressure"><h2>Spanwise loads</h2><img src="spanwise_loading.png" alt="Spanwise loads"></html>

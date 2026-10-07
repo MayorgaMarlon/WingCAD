@@ -20,6 +20,7 @@ from PySide6.QtWidgets import (
     QPushButton,
     QScrollArea,
     QStackedWidget,
+    QTabWidget,
     QVBoxLayout,
     QWidget,
 )
@@ -42,6 +43,7 @@ from gui.component_panels.nacelle_panel import NacellePanel
 from gui.component_panels.wing_panel import WingPanel
 from gui.document_tree import DocumentTree
 from gui.placement_panel import PlacementPanel
+from gui.flowpanel_panel import FlowPanelPanel
 from geometry.placement import Placement
 
 
@@ -537,10 +539,11 @@ class MainWindow(QMainWindow):
         distribucion_principal.addWidget(
             desplazamiento_panel
         )
-        distribucion_principal.addWidget(
-            grupo_visualizador,
-            1,
-        )
+        workspace_tabs = QTabWidget()
+        workspace_tabs.addTab(grupo_visualizador, "Design")
+        self.analysis_panel = FlowPanelPanel(self.aplicacion, self)
+        workspace_tabs.addTab(self.analysis_panel, "Analysis / FLOWPanel")
+        distribucion_principal.addWidget(workspace_tabs, 1)
 
         self.setCentralWidget(
             widget_central
@@ -2452,5 +2455,10 @@ class MainWindow(QMainWindow):
     def closeEvent(self, evento):
         """Cierra correctamente VTK."""
 
+        if self.analysis_panel.busy():
+            QMessageBox.information(self, "Analysis running", "Wait for the analysis to finish or cancel the task before closing WingCAD.")
+            evento.ignore()
+            return
+        self.analysis_panel.finalize()
         self.visualizador.Finalize()
         evento.accept()

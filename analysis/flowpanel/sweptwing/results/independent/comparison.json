@@ -1,0 +1,157 @@
+{
+  "geometry_audit": {
+    "section_y_mm": 622.3,
+    "samples": 802,
+    "max_reference_to_CAD_distance_mm": 0.5767337635271651,
+    "rms_reference_to_CAD_distance_mm": 0.10098945306448899,
+    "metric": "One-way distance from dense continuous reference profile to CAD plane section; not Hausdorff",
+    "source": "examples\\08_weber_swept_wing.wingcad",
+    "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+    "step_sha256": "d54adad2e4ef5059b2da74971e14b1081832fc50a5385622fddc57720e79e199",
+    "mesher": "Gmsh independent unstructured Delaunay",
+    "reference_nodes_used": false,
+    "refinement_ratio": 1.5,
+    "fixed_CAD": true,
+    "fixed_size_field_distances_m": [
+      0.04,
+      0.6
+    ]
+  },
+  "cases": {
+    "FLOWPanel reference": {
+      "flowpanel_version": "2.0.0",
+      "density_kg_m3": 1.225,
+      "panels": 2880,
+      "CL": 0.27156078298409103,
+      "CD_inviscid": 0.006597903105963334,
+      "speed_mps": 30.0,
+      "aoa_deg": 4.2,
+      "bref_m": 2.4892,
+      "sref_m2": 1.239223328
+    },
+    "WingCAD coarse": {
+      "normal_sign": 1,
+      "Cp_max": 0.6372794769334644,
+      "solve_seconds": 1.4509467,
+      "parent_closed_volume_m3": 0.04641903036905424,
+      "panels": 2806,
+      "speed_mps": 30.0,
+      "gmsh_version": "4.15.2",
+      "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+      "CD_inviscid": 0.01277612865760597,
+      "level": "coarse",
+      "solver_formulation": "direct_open_surface",
+      "julia_version": "1.11.9",
+      "mesh_size_min_m": 0.0375,
+      "sref_m2": 1.2392233279999998,
+      "moment_reference_m": [
+        0.12446,
+        0.0,
+        0.0
+      ],
+      "Cm": -0.27244026809082417,
+      "flowpanel_version": "2.0.0",
+      "open_boundary_edges": 40,
+      "density_kg_m3": 1.225,
+      "mesh_size_max_m": 0.18,
+      "aoa_deg": 4.2,
+      "units": "m",
+      "step_sha256": "d54adad2e4ef5059b2da74971e14b1081832fc50a5385622fddc57720e79e199",
+      "cref_m": 0.49784,
+      "mesh_sha256": "b26b46d528a1fd43ee005ffe3cc7f621f0594d96c2401849085887f9ebba5f7d",
+      "Cp_min": -0.9785499638920063,
+      "CL": 0.23382642082967775,
+      "minimum_quality": 0.33666684997769936,
+      "bref_m": 2.4892,
+      "tip_caps": false
+    },
+    "WingCAD medium": {
+      "normal_sign": 1,
+      "Cp_max": 0.7147958596218552,
+      "solve_seconds": 3.3364399,
+      "parent_closed_volume_m3": 0.04696582634453041,
+      "panels": 6214,
+      "speed_mps": 30.0,
+      "gmsh_version": "4.15.2",
+      "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+      "CD_inviscid": 0.011032695758740335,
+      "level": "medium",
+      "solver_formulation": "direct_open_surface",
+      "julia_version": "1.11.9",
+      "mesh_size_min_m": 0.025,
+      "sref_m2": 1.2392233279999998,
+      "moment_reference_m": [
+        0.12446,
+        0.0,
+        0.0
+      ],
+      "Cm": -0.303379658466,
+      "flowpanel_version": "2.0.0",
+      "open_boundary_edges": 60,
+      "density_kg_m3": 1.225,
+      "mesh_size_max_m": 0.12,
+      "aoa_deg": 4.2,
+      "units": "m",
+      "step_sha256": "d54adad2e4ef5059b2da74971e14b1081832fc50a5385622fddc57720e79e199",
+      "cref_m": 0.49784,
+      "mesh_sha256": "e30c6662414d8ddc36aeefb344e420af5d4504f1ebd5832e97b2204fef7687e4",
+      "Cp_min": -1.2344295583264677,
+      "CL": 0.250461964132705,
+      "minimum_quality": 0.34316675256874635,
+      "bref_m": 2.4892,
+      "tip_caps": false
+    },
+    "WingCAD fine": {
+      "normal_sign": 1,
+      "Cp_max": 0.7712418605343146,
+      "solve_seconds": 17.7501744,
+      "parent_closed_volume_m3": 0.047258275873031434,
+      "panels": 13734,
+      "speed_mps": 30.0,
+      "gmsh_version": "4.15.2",
+      "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+      "CD_inviscid": 0.009197026658454222,
+      "level": "fine",
+      "solver_formulation": "direct_open_surface",
+      "julia_version": "1.11.9",
+      "mesh_size_min_m": 0.016666666666666666,
+      "sref_m2": 1.2392233279999998,
+      "moment_reference_m": [
+        0.12446,
+        0.0,
+        0.0
+      ],
+      "Cm": -0.3017682907799506,
+      "flowpanel_version": "2.0.0",
+      "open_boundary_edges": 92,
+      "density_kg_m3": 1.225,
+      "mesh_size_max_m": 0.08,
+      "aoa_deg": 4.2,
+      "units": "m",
+      "step_sha256": "d54adad2e4ef5059b2da74971e14b1081832fc50a5385622fddc57720e79e199",
+      "cref_m": 0.49784,
+      "mesh_sha256": "3d09ab4f55c07b54f1c2ba88cb8cfd4b441e9907a18e5d8b4fce5a1de67dbd7d",
+      "Cp_min": -1.1875142669476295,
+      "CL": 0.25099915221367525,
+      "minimum_quality": 0.3438061444409025,
+      "bref_m": 2.4892,
+      "tip_caps": false
+    }
+  },
+  "adjacent_mesh_changes_percent": {
+    "coarse_to_medium": {
+      "CL": 7.114484002278254,
+      "CD_inviscid": -13.646018646092173
+    },
+    "medium_to_fine": {
+      "CL": 0.21447890614065823,
+      "CD_inviscid": -16.638445765459064
+    }
+  },
+  "fine_vs_reference_percent": {
+    "CL": -7.571649538077951,
+    "CD_inviscid": 39.39317553999453
+  },
+  "convergence_demonstrated": false,
+  "interpretation": "Changes on fixed CAD measure mesh sensitivity, not an error bound. Residual is not solely geometry error."
+}
