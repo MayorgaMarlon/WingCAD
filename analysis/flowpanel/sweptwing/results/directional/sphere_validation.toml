@@ -1,0 +1,25 @@
+passed = false
+RMS_limit = 0.05
+analytic_Cp = "1 - 2.25 sin(theta)^2"
+
+[[cases]]
+Cp_min = -1.1011154171679016
+normal_velocity_rms = 7.583318483686897e-15
+Cp_RMS_error = 0.1321436533694873
+gradient_condition_max = 1.0937243391531974
+panels = 80
+Cp_max_error = 0.23040054333693094
+[[cases]]
+Cp_min = -1.1339660421953277
+normal_velocity_rms = 7.147675798353106e-15
+Cp_RMS_error = 0.08939812952711713
+gradient_condition_max = 1.0883255908580403
+panels = 320
+Cp_max_error = 0.17198970873206854
+[[cases]]
+Cp_min = -1.2147908377084629
+normal_velocity_rms = 1.9702165568572983e-14
+Cp_RMS_error = 0.052731216469402466
+gradient_condition_max = 1.086827730119445
+panels = 1280
+Cp_max_error = 0.12664340841311716

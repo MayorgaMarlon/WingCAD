@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>WingCAD mesh convergence</title>
+<style>body{font:17px system-ui;max-width:1200px;margin:35px auto;color:#172b40}td,th{padding:12px;border-bottom:1px solid #ccc;text-align:left}img{width:100%}table{border-collapse:collapse;width:100%}</style>
+<h1>Independent CAD mesh: convergence assessment</h1>
+<p>Engineering criteria passed: <strong>True</strong>. Same WingCAD RAE101 BRep, dimensions and conditions;
+cosine spacing in chord and semispan. No reference nodes or profile interpolant used.</p>
+<p><strong>Not a full convergence claim.</strong> The final spacing increments are smaller than the initial ones.
+CL still trends with refinement. In the finest mesh, panels with Cp below -10 contribute
+-10.34% of the net inviscid CD (signed). Tip pressures remain unresolved;
+small adjacent coefficient changes do not establish asymptotic accuracy.</p>
+<table><tr><th>Mesh</th><th>Panels</th><th>CL</th><th>CD inviscid</th><th>Raw Cp minimum</th><th>Panels Cp &lt; −10</th></tr><tr><td>coarse</td><td>1536</td><td>0.2537512</td><td>0.0053707</td><td>-1.37</td><td>0</td></tr><tr><td>medium</td><td>3456</td><td>0.2565713</td><td>0.0051399</td><td>-2.91</td><td>0</td></tr><tr><td>fine</td><td>7776</td><td>0.2605803</td><td>0.0051252</td><td>-5.95</td><td>0</td></tr><tr><td>ultra</td><td>17280</td><td>0.2650540</td><td>0.0051503</td><td>-12</td><td>8</td></tr><tr><td>extended</td><td>21600</td><td>0.2663464</td><td>0.0051490</td><td>-17.1</td><td>24</td></tr><tr><td>verification</td><td>26400</td><td>0.2675078</td><td>0.0051399</td><td>-23.1</td><td>40</td></tr></table>
+<h2>Predeclared checks</h2><p>Two successive refinements must pass CL ≤1%, CD ≤5%, Cp RMS ≤0.02 and Cp 95th-percentile difference ≤0.05.
+Cp uses the raw constant value of the triangle containing each evaluation point on the fixed interior domain x/c=0.01…0.99, |2y/b|=0.05…0.95.
+Tip, root and edge singular regions are excluded from this local criterion; this is not a claim of pointwise convergence there.</p>
+<table><tr><th>Refinement</th><th>CL change %</th><th>CD change %</th><th>Cp RMS</th><th>Cp p95</th><th>Pass</th></tr><tr><td>coarse → medium</td><td>1.1113</td><td>4.2964</td><td>0.027407</td><td>0.057114</td><td>False</td></tr><tr><td>medium → fine</td><td>1.5625</td><td>0.28754</td><td>0.024165</td><td>0.048526</td><td>False</td></tr><tr><td>fine → ultra</td><td>1.7168</td><td>0.49101</td><td>0.022225</td><td>0.044227</td><td>False</td></tr><tr><td>ultra → extended</td><td>0.48757</td><td>0.026626</td><td>0.016781</td><td>0.034441</td><td>True</td></tr><tr><td>extended → verification</td><td>0.43607</td><td>0.17677</td><td>0.016168</td><td>0.035901</td><td>True</td></tr></table>
+<p>Wake segments are paired from actual CAD mesh connectivity with FLOWPanel's reverse boundary orientation,
+one wake per upper/lower TE edge pair, directions aligned with freestream. Upper TE panels precede the correct
+adjacent structured triangles. The original unstructured results remain preserved; this changes the panel distribution,
+not the CAD. Agreement with experimental or reference coefficients is not an acceptance criterion.</p>
+<p>The connected case shares root nodes, avoiding an artificial open boundary between half-wings. In the corrected
+pressure runs, a weighted least-squares tangent gradient uses two edge-neighbour rings, excludes cross-wake stencils,
+and is invariant to cell numbering. Only actual paired TE panels receive the Kutta pressure correction; forces are
+integrated from that same Cp without a second index-based correction. Raw singular tip values are retained above.</p>
+<p><a href="convergence.json">Full numerical audit</a> · <a href="pressure_cuts.csv">Raw pressure cuts</a></p>
+<img src="mesh_distribution.png" alt="Mesh distribution and projected wake"><img src="coefficients.png" alt="Coefficient refinement"><img src="pressure_cuts.png" alt="Unsmoothed pressure cuts"></html>

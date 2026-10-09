@@ -46,7 +46,7 @@ airfoil         = "airfoil-rae101.csv"          # Airfoil contour file
 # NOTE: NDIVS is the number of divisions (panels) in each dimension. This an be
 #       either an integer, or an array of tuples as shown below
 
-n_rfl           = 8                             # Control number of chordwise panels
+n_rfl           = parse(Int, get(ENV, "WINGCAD_REFERENCE_CHORD", "8"))                             # Control number of chordwise panels
 # n_rfl         = 10                            # <-- uncomment this for finer discretization
 
 #           # 0 to 0.25 of the airfoil has `n_rfl` panels at a geometric expansion of 10 that is not central
@@ -61,7 +61,7 @@ NDIVS_rfl = [ (0.25, n_rfl,   10.0, false),
 #       middle panel is 10 times larger than the peripheral panels.
 
 # ----- Spanwise discretization
-n_span          = 15                            # Number of spanwise panels on each side of the wing
+n_span          = parse(Int, get(ENV, "WINGCAD_REFERENCE_SPAN", "15"))                            # Number of spanwise panels on each side of the wing
 # n_span        = 60                            # <-- uncomment this for finer discretization
 
 NDIVS_span_l    = [(1.0, n_span, 10.0, false)]  # Discretization of left side
@@ -205,7 +205,7 @@ Lhat = cross(Vinf/magVinf, [0.0,1.0,0.0])
 forces = pnl.calcfield_LDS(body, Lhat, Vinf/magVinf)
 qS = 0.5*rho*magVinf^2*b^2/ar
 coeff = Dict("CL"=>dot(forces[:,1],Lhat)/qS, "CD_inviscid"=>dot(forces[:,2],Vinf/magVinf)/qS,
-             "panels"=>body.ncells, "flowpanel_version"=>string(pkgversion(pnl)),
+             "chord_control"=>n_rfl, "span_intervals"=>n_span, "panels"=>body.ncells, "flowpanel_version"=>string(pkgversion(pnl)),
              "speed_mps"=>magVinf, "aoa_deg"=>AOA, "density_kg_m3"=>rho, "bref_m"=>b, "sref_m2"=>b^2/ar)
 open(joinpath(save_path,"coefficients.toml"),"w") do io; TOML.print(io,coeff); end
 if length(ARGS) >= 2

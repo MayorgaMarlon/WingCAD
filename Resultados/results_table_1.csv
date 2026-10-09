@@ -1,0 +1,19 @@
+﻿Section,Quantity,Value,Unit
+Results,Lift coefficient CL,0.26060908479193273,
+Results,Inviscid drag coefficient CD,0.004596434667342692,
+Results,Minimum Cp,-1.0128576320186307,
+Results,Maximum Cp,0.6855768433556992,
+Results,Linear solve time,15.3091021,s
+Results,Maximum normal velocity residual,1.3987033753437572e-11,m/s
+Results,Dynamic pressure,551.25,Pa
+Results,Lift (CL × q × S),178.0277626212948,N
+Results,Inviscid drag (CD × q × S),3.1399249973011902,N
+Run conditions,Speed,30.0,m/s
+Run conditions,Angle of attack,4.2,deg
+Run conditions,Air density,1.225,kg/m³
+Run conditions,Reference area,1.239223328,m²
+Run conditions,Reference span,2.4892,m
+Run conditions,Surface panels,6144,
+Run conditions,Mesh resolution,coarse,
+Run conditions,Wake segments,32,
+Run conditions,Pressure method,least_squares,

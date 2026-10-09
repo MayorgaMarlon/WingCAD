@@ -78,7 +78,7 @@ def clip(poly, y, sign):
     return result
 
 
-def loading(triangles, forces, edges):
+def loading(triangles, forces, edges, *, lift=L, drag=D, dynamic_pressure=Q, chord=C):
     result = np.zeros((len(edges)-1,3))
     for tri,force in zip(triangles,forces):
         a = area(tri)
@@ -88,7 +88,7 @@ def loading(triangles, forces, edges):
             poly = clip(clip(list(tri),lo,1),hi,-1)
             result[i] += force * area(poly)/a
     assert np.allclose(result.sum(axis=0),forces.sum(axis=0),rtol=1e-6,atol=1e-6)
-    return np.column_stack((result@L,result@D))/(np.diff(edges)[:,None]*Q*C)
+    return np.column_stack((result@lift,result@drag))/(np.diff(edges)[:,None]*dynamic_pressure*chord)
 
 
 def main():

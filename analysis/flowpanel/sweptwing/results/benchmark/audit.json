@@ -1,0 +1,203 @@
+{
+  "configurations": {
+    "FLOWPanel tutorial": {
+      "flowpanel_version": "2.0.0",
+      "density_kg_m3": 1.225,
+      "panels": 2880,
+      "CL": 0.27156078298409103,
+      "CD_inviscid": 0.006597903105963334,
+      "speed_mps": 30.0,
+      "aoa_deg": 4.2,
+      "bref_m": 2.4892,
+      "sref_m2": 1.239223328
+    },
+    "FLOWPanel refined 1": {
+      "panels": 6624,
+      "speed_mps": 30.0,
+      "CD_inviscid": 0.006263254780364489,
+      "span_intervals": 23,
+      "chord_control": 12,
+      "sref_m2": 1.239223328,
+      "flowpanel_version": "2.0.0",
+      "density_kg_m3": 1.225,
+      "aoa_deg": 4.2,
+      "CL": 0.27143134195616825,
+      "bref_m": 2.4892
+    },
+    "FLOWPanel refined 2": {
+      "panels": 14688,
+      "speed_mps": 30.0,
+      "CD_inviscid": 0.005864841621819156,
+      "span_intervals": 34,
+      "chord_control": 18,
+      "sref_m2": 1.239223328,
+      "flowpanel_version": "2.0.0",
+      "density_kg_m3": 1.225,
+      "aoa_deg": 4.2,
+      "CL": 0.27081254815582895,
+      "bref_m": 2.4892
+    },
+    "WingCAD coarse": {
+      "solve_seconds": 12.925921,
+      "Cp_max": 0.6855768433556992,
+      "closed_tips": false,
+      "panels": 6144,
+      "speed_mps": 30.0,
+      "reference_nodes_used": false,
+      "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+      "span_intervals": 16,
+      "level": "coarse",
+      "CD_inviscid": 0.004596434667342692,
+      "smallest_span_interval_mm": 9.56429807730355,
+      "first_chord_interval_mm": 1.0638011936364813,
+      "maximum_scaled_gradient_condition": 103.60630179226635,
+      "connected_root": true,
+      "sref_m2": 1.239223328,
+      "wake_segments": 32,
+      "linear_solver": "in-place LU, 32 sampled equation residual checks",
+      "normal_velocity_rms_mps": 1.0125243251325507e-12,
+      "flowpanel_version": "2.0.0",
+      "density_kg_m3": 1.225,
+      "triangulation": "mirrored_shortest",
+      "aoa_deg": 4.2,
+      "spacing": "bounded",
+      "normal_velocity_residual_mps": 1.3987033753437572e-11,
+      "contour_intervals": 96,
+      "maximum_sampled_node_CAD_distance_mm": 2.899533814893044e-07,
+      "pressure_reconstruction": "least_squares",
+      "Cp_min": -1.0128576320186307,
+      "boundary_solver": "open direct",
+      "CL": 0.26060908479193273,
+      "bref_m": 2.4892
+    },
+    "WingCAD medium": {
+      "solve_seconds": 61.3074723,
+      "Cp_max": 0.7549116961153604,
+      "closed_tips": false,
+      "panels": 13824,
+      "speed_mps": 30.0,
+      "reference_nodes_used": false,
+      "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+      "span_intervals": 24,
+      "level": "medium",
+      "CD_inviscid": 0.004770987870034969,
+      "smallest_span_interval_mm": 5.717156365360779,
+      "first_chord_interval_mm": 0.6993399133202627,
+      "maximum_scaled_gradient_condition": 108.74140542524519,
+      "connected_root": true,
+      "sref_m2": 1.239223328,
+      "wake_segments": 48,
+      "linear_solver": "in-place LU, 32 sampled equation residual checks",
+      "normal_velocity_rms_mps": 2.176568906220886e-12,
+      "flowpanel_version": "2.0.0",
+      "density_kg_m3": 1.225,
+      "triangulation": "mirrored_shortest",
+      "aoa_deg": 4.2,
+      "spacing": "bounded",
+      "normal_velocity_residual_mps": 4.516387264175137e-11,
+      "contour_intervals": 144,
+      "maximum_sampled_node_CAD_distance_mm": 1.3136536374252152e-08,
+      "pressure_reconstruction": "least_squares",
+      "Cp_min": -1.724839016358453,
+      "boundary_solver": "open direct",
+      "CL": 0.26283213808479433,
+      "bref_m": 2.4892
+    },
+    "WingCAD fine": {
+      "solve_seconds": 291.6156944,
+      "Cp_max": 0.8105905160658707,
+      "closed_tips": false,
+      "panels": 31104,
+      "speed_mps": 30.0,
+      "reference_nodes_used": false,
+      "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+      "span_intervals": 36,
+      "level": "fine",
+      "CD_inviscid": 0.005038759449939122,
+      "smallest_span_interval_mm": 3.614951312262747,
+      "first_chord_interval_mm": 0.4633028560832175,
+      "maximum_scaled_gradient_condition": 111.16410027679252,
+      "connected_root": true,
+      "sref_m2": 1.239223328,
+      "wake_segments": 72,
+      "linear_solver": "in-place LU, 32 sampled equation residual checks",
+      "normal_velocity_rms_mps": 6.142235863019394e-12,
+      "flowpanel_version": "2.0.0",
+      "density_kg_m3": 1.225,
+      "triangulation": "mirrored_shortest",
+      "aoa_deg": 4.2,
+      "spacing": "bounded",
+      "normal_velocity_residual_mps": 1.0383049975359882e-10,
+      "contour_intervals": 216,
+      "maximum_sampled_node_CAD_distance_mm": 3.40449046632402e-05,
+      "pressure_reconstruction": "least_squares",
+      "Cp_min": -2.840924994624389,
+      "boundary_solver": "open direct",
+      "CL": 0.2654763691118606,
+      "bref_m": 2.4892
+    }
+  },
+  "inputs": [
+    {
+      "path": "exports\\flowpanel\\weber\\reference\\reference_L.vtk",
+      "sha256": "eacbfae4c3752b64a4134c7bb6d1e129a3bcf7aea63e513a44db631c295edd5c"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\reference\\reference_R.vtk",
+      "sha256": "8bef8e14dfd66aee758ea1a84a7d1b10d513a01cf2b09d46758e4cecb99a1c9b"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\reference\\coefficients.toml",
+      "sha256": "ad9e434482d7375b694359393975a55c07b839e4a722938a4ca8cd289a108179"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\reference_r12_s23\\reference_L.vtk",
+      "sha256": "695f449afaed9455db4967ec2e0d4cd9424418dc169b397a8c8ed0a5010e7a7e"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\reference_r12_s23\\reference_R.vtk",
+      "sha256": "575d078ea4b4d31315244d51fb2a7f39ad73a122f2615c9200dec116879e3a2e"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\reference_r12_s23\\coefficients.toml",
+      "sha256": "4fe3544988779797dceb6f6528575f2ca33007efa0004257ecacd9f2f5f63250"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\reference_r18_s34\\reference_L.vtk",
+      "sha256": "dd0d85fff087f067db4a86221947af80d4daf23a37526e3d5f09a2ab9654a93d"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\reference_r18_s34\\reference_R.vtk",
+      "sha256": "1887988544c3c6186a755fe6b51d8663896436fe85f4d1555a1d45e2f1d72ab9"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\reference_r18_s34\\coefficients.toml",
+      "sha256": "c4680142feab0a88ce77bc3ecb57443a7661e6c96a7cc0ba9c8f2488f54a34e1"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\chord_resolved\\coarse\\results\\wing_C.vtk",
+      "sha256": "72d2e9b1b633e407316048ccb159a70e8afb91f686d72f26ab7d3b520ec9d1a5"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\chord_resolved\\coarse\\results\\coefficients.toml",
+      "sha256": "5368b4ad4e77d7ca32d336aaf42632fd047b2ba6f1329cf2dea9d9b3668cd2da"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\chord_resolved\\medium\\results\\wing_C.vtk",
+      "sha256": "69cf0c4e93e38484979668692406b0abde6ef4b8403286392fd55a0a49734cec"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\chord_resolved\\medium\\results\\coefficients.toml",
+      "sha256": "1706b995232fb6a27a57164996cd9d94f273bb6254bee841eeee92cda65e7d29"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\chord_resolved\\fine\\results\\wing_C.vtk",
+      "sha256": "cb22ae9fce9b0aab6a6eef0c0dd13d33310bae433123bdfaeac742a17f0fcad7"
+    },
+    {
+      "path": "exports\\flowpanel\\weber\\chord_resolved\\fine\\results\\coefficients.toml",
+      "sha256": "d94e8ea9b757c45adf2b096a1ea7cf9387cc4ec51b1d5a339595a5454eab84c0"
+    }
+  ],
+  "note": "Nominal geometry and operating conditions match; surface representation, topology and pressure reconstruction differ. Not an isolated geometry-error measurement."
+}

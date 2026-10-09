@@ -5,6 +5,7 @@ using LinearAlgebra
 import FLOWPanel as pnl
 import GeoIO
 import Meshes
+include(joinpath(@__DIR__, "topology_gradient.jl"))
 
 function run_case(folder, maxpanels)
     config = TOML.parsefile(joinpath(folder, "case.toml"))
@@ -47,11 +48,21 @@ function run_case(folder, maxpanels)
     println("Solving $(body.ncells) panels, $(body.nsheddings) shedding panels on CPU.")
     elapsed = @elapsed pnl.solve(body, inflow, wake_a, wake_b)
     pnl.calcfield_U(body, body)
-    pnl.calcfield_Ugradmu(body)
+    reconstruction = get(config, "pressure_reconstruction", "least_squares")
+    if reconstruction == "topology_safe"
+        config["TE_gradient_cells"] = topology_gradient!(body)
+    elseif reconstruction == "least_squares"
+        config["maximum_scaled_gradient_condition"] = least_squares_gradient!(body)
+    elseif reconstruction == "legacy_flowpanel"
+        pnl.calcfield_Ugradmu(body)
+    else
+        error("Unknown pressure reconstruction: $reconstruction")
+    end
+    config["pressure_reconstruction"] = reconstruction
     pnl.addfields(body, "Ugradmu", "U")
-    cp = pnl.calcfield_Cp(body, speed)
+    cp = reconstruction == "legacy_flowpanel" ? pnl.calcfield_Cp(body,speed) : topology_pressure!(body,speed)
     all(isfinite, cp) || error("Non-finite pressure coefficients; inspect the mesh and wake.")
-    pnl.calcfield_F(body, speed, rho)
+    pnl.calcfield_F(body, speed, rho;correct_kuttacondition=(reconstruction == "legacy_flowpanel"))
     span_direction = [0.0, 1.0, 0.0]
     lift_direction = cross(direction, span_direction)
     forces = pnl.calcfield_LDS(body, lift_direction, direction)
@@ -77,7 +88,9 @@ function run_case(folder, maxpanels)
     println("Saved to $output. Inspect normals/wake and compare all three mesh levels before interpreting results.")
 end
 
-if isempty(ARGS)
-    error("Usage: julia --project=analysis/flowpanel analysis/flowpanel/solve.jl CASE_DIRECTORY [MAX_PANELS=8000]")
+if abspath(PROGRAM_FILE) == @__FILE__
+    if isempty(ARGS)
+        error("Usage: julia --project=analysis/flowpanel analysis/flowpanel/solve.jl CASE_DIRECTORY [MAX_PANELS=8000]")
+    end
+    run_case(abspath(ARGS[1]), length(ARGS) > 1 ? parse(Int, ARGS[2]) : 8000)
 end
-run_case(abspath(ARGS[1]), length(ARGS) > 1 ? parse(Int, ARGS[2]) : 8000)

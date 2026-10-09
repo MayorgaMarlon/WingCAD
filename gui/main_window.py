@@ -543,6 +543,8 @@ class MainWindow(QMainWindow):
         workspace_tabs.addTab(grupo_visualizador, "Design")
         self.analysis_panel = FlowPanelPanel(self.aplicacion, self)
         workspace_tabs.addTab(self.analysis_panel, "Analysis / FLOWPanel")
+        # Modelling tools belong to Design; analysis uses the full window width.
+        workspace_tabs.currentChanged.connect(lambda index: desplazamiento_panel.setVisible(index == 0))
         distribucion_principal.addWidget(workspace_tabs, 1)
 
         self.setCentralWidget(
@@ -705,6 +707,7 @@ class MainWindow(QMainWindow):
         """Actualiza la interfaz para el documento actual."""
 
         self.objeto_actual = None
+        self.analysis_panel.document_changed()
 
         self.arbol_documento.establecer_documento(
             self.aplicacion.documento

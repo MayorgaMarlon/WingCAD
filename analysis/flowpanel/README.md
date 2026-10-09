@@ -265,3 +265,60 @@ Los archivos bajo `exports/` ya están excluidos de Git.
 - [Gmsh](https://gmsh.info/)
 - [Julia](https://julialang.org/downloads/)
 - [WSL en Windows](https://learn.microsoft.com/en-us/windows/wsl/install)
+
+
+## Isolated Weber wing in WingCAD
+
+Open `examples/08_weber_swept_wing.wingcad`, then **Analysis / FLOWPanel**.
+The panel detects the isolated wing and defaults to 30 m/s, 4.2 degrees and
+1.225 kg/m3. **Prepare mesh** snapshots the actual current document and runs
+the independent CAD mesh adapter. **Configure simulation** lets you edit the
+flow conditions; **Run simulation** creates a separate run and uses the
+ordered-wing solver. On completion **View results** displays Cp inside the
+**Analysis 3D** tab; **View mesh** displays the surface and **Show wake** uses
+the matching wing wake file. Gmsh is not required for this preview.
+
+This adapter supports the exact Weber geometry: RAE101 at root and tip,
+2489.2 mm span, constant chord 497.84 mm, sweep 45 degrees, zero dihedral,
+twist and placement, symmetric wing. Unsupported geometric changes produce
+an explicit message; they are never silently replaced by the example file.
+Speed, angle of attack and density are editable. Analysis tips are open.
+
+Resolutions: coarse 6144, medium 13824, fine 31104 panels. Fine is memory
+intensive. These levels are not certified converged. Experimental pressure
+corrections are not activated by this integration.
+
+**Open case** accepts the existing ordered Weber `case.toml` files as well as
+Manta cases. For example, open
+`exports/flowpanel/weber/chord_resolved/fine/case.toml`, then **View results**.
+Manta continues using its original mesh files, solver and 8000-panel run limit.
+
+Headless checks (no QApplication or VTK initialization):
+
+```powershell
+python -m unittest analysis.flowpanel.test_workflow
+python -m py_compile core/flowpanel_workflow.py gui/flowpanel_panel.py gui/analysis_view.py gui/main_window.py analysis/flowpanel/view_mesh.py analysis/flowpanel/sweptwing/prepare_ordered.py
+```
+
+The integrated headless workflow was exercised with a new 6144-panel case:
+snapshot preparation, mesh preview conversion, isolated run configuration and
+`solve_ordered.jl`. It reproduced the previous coarse result (CL 0.2606090848,
+CD inviscid 0.0045964347); the Cp surface, wake, normal residual and unchanged
+original case were checked. This verifies backend integration, not mesh
+convergence or interactive Qt/VTK behavior. The running application must be
+restarted to load the updated panel.
+
+
+## Saved-run plots inside WingCAD
+
+For a completed isolated Weber run, click **View plots**. The **Plots** page
+contains **Pressure Cp**, **Pressure difference** and **Spanwise loading**.
+Only the selected run is read: no reference, VSPAERO or experimental curves
+are added. Pressure uses raw panel values; span strips conservatively integrate
+the saved panel forces and use that run's speed, density and angle of attack.
+The Cp-difference root station is sampled at eta=1e-7 on the positive semispan.
+PNG and CSV files are written to the run's `results/plots` folder; the panel's
+**Open PNG and CSV files** button opens it. The manifest records input hashes.
+Generating plots does not rerun the simulation.
+
+Headless reproduction: `python analysis/flowpanel/plot_run.py PATH_TO_RUN`.

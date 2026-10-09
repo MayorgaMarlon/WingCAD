@@ -1,0 +1,28 @@
+{
+  "panels": 26400,
+  "unmatched_reflected_triangles": 26400,
+  "all": {
+    "count": 26400,
+    "aspect_max": 275.92804985506297,
+    "aspect_p95": 29.960003105803267,
+    "quality_min": 0.006299747267981872
+  },
+  "leading_edge": {
+    "count": 3800,
+    "aspect_max": 31.646373398096383,
+    "aspect_p95": 28.820361967106766,
+    "quality_min": 0.05492796120117937
+  },
+  "trailing_edge": {
+    "count": 3800,
+    "aspect_max": 275.92804985506297,
+    "aspect_p95": 205.59001748530451,
+    "quality_min": 0.006299747267981872
+  },
+  "tip": {
+    "count": 3696,
+    "aspect_max": 110.844871091669,
+    "aspect_p95": 11.82105002643527,
+    "quality_min": 0.01576647729682253
+  }
+}

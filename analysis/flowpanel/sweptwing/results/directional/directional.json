@@ -1,0 +1,1843 @@
+{
+  "studies": {
+    "cosine": {
+      "cases": {
+        "c24_s16": {
+          "solve_seconds": 0.4624177,
+          "Cp_max": 0.6714792709939756,
+          "panels": 3072,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 16,
+          "level": "c24_s16",
+          "CD_inviscid": 0.005734819782519202,
+          "smallest_span_interval_mm": 11.957320005069702,
+          "first_chord_interval_mm": 2.1295451068311197,
+          "maximum_scaled_gradient_condition": 28.236913613611367,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 32,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "normal_velocity_residual_mps": 6.119993400943713e-12,
+          "contour_intervals": 48,
+          "maximum_sampled_node_CAD_distance_mm": 3.4666946720963175e-07,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -0.8086500663209362,
+          "CL": 0.2564882126478295,
+          "bref_m": 2.4892,
+          "CL_wake": 0.26290766120743425,
+          "CD_trefftz": 0.004512436292363104,
+          "outer_strip_circulation": 0.4419829361848783,
+          "wake_length_m": 3.520260399459108,
+          "audit": {
+            "panels": 3072,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 3072,
+              "aspect_max": 112.7027661372817,
+              "aspect_p95": 33.49036149425215,
+              "quality_min": 0.015501853075035519
+            },
+            "leading_edge": {
+              "count": 448,
+              "aspect_max": 34.12484643214775,
+              "aspect_p95": 32.81344772119454,
+              "quality_min": 0.051157100884140855
+            },
+            "trailing_edge": {
+              "count": 448,
+              "aspect_max": 112.7027661372817,
+              "aspect_p95": 108.37166203905431,
+              "quality_min": 0.015501853075035519
+            },
+            "tip": {
+              "count": 384,
+              "aspect_max": 32.87418427656606,
+              "aspect_p95": 11.023363668758613,
+              "quality_min": 0.05421829948186192
+            },
+            "Cp_symmetry_max": 2.511324481702104e-13,
+            "Cp_min_location": [
+              1.717968682654934,
+              -1.220838531023878,
+              -7.69471176898172e-05
+            ],
+            "principal_speed_at_Cp_min": 23.172441663490925,
+            "gradient_speed_at_Cp_min": 32.30280368724578,
+            "tip_5_percent_CD": 4.11038351588208e-05
+          }
+        },
+        "c24_s24": {
+          "solve_seconds": 1.1568383,
+          "Cp_max": 0.7115929620345667,
+          "panels": 4608,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 24,
+          "level": "c24_s24",
+          "CD_inviscid": 0.00522232002940497,
+          "smallest_span_interval_mm": 5.323862767077799,
+          "first_chord_interval_mm": 2.1295451068311197,
+          "maximum_scaled_gradient_condition": 18.949029206419333,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 48,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "normal_velocity_residual_mps": 1.3166703838329852e-11,
+          "contour_intervals": 48,
+          "maximum_sampled_node_CAD_distance_mm": 1.3136539916268827e-08,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -2.6195081778266034,
+          "CL": 0.2560791047347821,
+          "bref_m": 2.4892,
+          "CL_wake": 0.2616417057847344,
+          "CD_trefftz": 0.004573508193448906,
+          "outer_strip_circulation": 0.292809439975397,
+          "wake_length_m": 3.520260399459108,
+          "audit": {
+            "panels": 4608,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 4608,
+              "aspect_max": 75.40437047077202,
+              "aspect_p95": 22.72570414082729,
+              "quality_min": 0.023267075333612237
+            },
+            "leading_edge": {
+              "count": 672,
+              "aspect_max": 22.83140557076955,
+              "aspect_p95": 21.666134691180677,
+              "quality_min": 0.07670784811048201
+            },
+            "trailing_edge": {
+              "count": 672,
+              "aspect_max": 75.40437047077202,
+              "aspect_p95": 71.55587691959872,
+              "quality_min": 0.023267075333612237
+            },
+            "tip": {
+              "count": 672,
+              "aspect_max": 33.42205944710579,
+              "aspect_p95": 8.1448992796471,
+              "quality_min": 0.05330574515182781
+            },
+            "Cp_symmetry_max": 1.461497589616556e-12,
+            "Cp_min_location": [
+              1.2582845646958762,
+              1.242825379077641,
+              -0.012492613774492298
+            ],
+            "principal_speed_at_Cp_min": 22.06608481913252,
+            "gradient_speed_at_Cp_min": 59.75083067903824,
+            "tip_5_percent_CD": -0.000754648477924629
+          }
+        },
+        "c24_s36": {
+          "solve_seconds": 2.9167842,
+          "Cp_max": 0.774936289448719,
+          "panels": 6912,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 36,
+          "level": "c24_s36",
+          "CD_inviscid": 0.004038017331540014,
+          "smallest_span_interval_mm": 2.3680393775066477,
+          "first_chord_interval_mm": 2.1295451068311197,
+          "maximum_scaled_gradient_condition": 12.710076412262454,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 72,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "normal_velocity_residual_mps": 5.657357915467287e-11,
+          "contour_intervals": 48,
+          "maximum_sampled_node_CAD_distance_mm": 4.338370270407537e-06,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -8.163045462129995,
+          "CL": 0.25445462211558584,
+          "bref_m": 2.4892,
+          "CL_wake": 0.2607872902089014,
+          "CD_trefftz": 0.0046230128863728,
+          "outer_strip_circulation": 0.19196412436973198,
+          "wake_length_m": 3.520260399459107,
+          "audit": {
+            "panels": 6912,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 6912,
+              "aspect_max": 50.349464755091134,
+              "aspect_p95": 15.129100350326397,
+              "quality_min": 0.03506155966143796
+            },
+            "leading_edge": {
+              "count": 1008,
+              "aspect_max": 15.245124956520064,
+              "aspect_p95": 14.553385685714593,
+              "quality_min": 0.11533699008295294
+            },
+            "trailing_edge": {
+              "count": 1008,
+              "aspect_max": 50.349464755091134,
+              "aspect_p95": 48.064885118356685,
+              "quality_min": 0.03506155966143796
+            },
+            "tip": {
+              "count": 960,
+              "aspect_max": 19.28626223838661,
+              "aspect_p95": 13.044153165015556,
+              "quality_min": 0.09413156034173267
+            },
+            "Cp_symmetry_max": 1.2847500840962311e-12,
+            "Cp_min_location": [
+              1.2501749974565248,
+              1.243810653540831,
+              -0.007936421299510363
+            ],
+            "principal_speed_at_Cp_min": 21.05427466826392,
+            "gradient_speed_at_Cp_min": 103.4378169742231,
+            "tip_5_percent_CD": -0.0013306968376925227
+          }
+        },
+        "c36_s16": {
+          "solve_seconds": 1.0969467,
+          "Cp_max": 0.6856420024907655,
+          "panels": 4608,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 16,
+          "level": "c36_s16",
+          "CD_inviscid": 0.005309837936651023,
+          "smallest_span_interval_mm": 11.957320005069702,
+          "first_chord_interval_mm": 0.9472157510026988,
+          "maximum_scaled_gradient_condition": 63.27227126783862,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 32,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "normal_velocity_residual_mps": 1.4423351402115259e-11,
+          "contour_intervals": 72,
+          "maximum_sampled_node_CAD_distance_mm": 3.4666946720963175e-07,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -0.720078666030856,
+          "CL": 0.2587055598359457,
+          "bref_m": 2.4892,
+          "CL_wake": 0.26324167086405326,
+          "CD_trefftz": 0.00454317366603677,
+          "outer_strip_circulation": 0.4640768092405665,
+          "wake_length_m": 3.520260399459108,
+          "audit": {
+            "panels": 4608,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 4608,
+              "aspect_max": 253.3619048903766,
+              "aspect_p95": 50.40441928607652,
+              "quality_min": 0.006862832667299099
+            },
+            "leading_edge": {
+              "count": 640,
+              "aspect_max": 52.41884614666548,
+              "aspect_p95": 46.65055088077337,
+              "quality_min": 0.03315930484330835
+            },
+            "trailing_edge": {
+              "count": 640,
+              "aspect_max": 253.3619048903766,
+              "aspect_p95": 225.48135459276065,
+              "quality_min": 0.006862832667299099
+            },
+            "tip": {
+              "count": 576,
+              "aspect_max": 73.90294165348551,
+              "aspect_p95": 15.290013429547956,
+              "quality_min": 0.023745814420390678
+            },
+            "Cp_symmetry_max": 4.192202140984591e-13,
+            "Cp_min_location": [
+              0.7932761714054299,
+              -0.7826177715806897,
+              0.010511702912212012
+            ],
+            "principal_speed_at_Cp_min": 25.919622531953895,
+            "gradient_speed_at_Cp_min": 15.957461941975907,
+            "tip_5_percent_CD": 1.6880665995056187e-05
+          }
+        },
+        "c36_s24": {
+          "solve_seconds": 2.948701,
+          "Cp_max": 0.7428819165466003,
+          "panels": 6912,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 24,
+          "level": "c36_s24",
+          "CD_inviscid": 0.00506400968269864,
+          "smallest_span_interval_mm": 5.323862767077799,
+          "first_chord_interval_mm": 0.9472157510026988,
+          "maximum_scaled_gradient_condition": 42.39610056529256,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 48,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "normal_velocity_residual_mps": 2.5898616584640877e-11,
+          "contour_intervals": 72,
+          "maximum_sampled_node_CAD_distance_mm": 1.3136539916268827e-08,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -2.9383888530294726,
+          "CL": 0.25979745948208666,
+          "bref_m": 2.4892,
+          "CL_wake": 0.26201763166178493,
+          "CD_trefftz": 0.00460281189986721,
+          "outer_strip_circulation": 0.3077269821357088,
+          "wake_length_m": 3.520260399459108,
+          "audit": {
+            "panels": 6912,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 6912,
+              "aspect_max": 169.51309709885828,
+              "aspect_p95": 33.28113968879987,
+              "quality_min": 0.01027701456672047
+            },
+            "leading_edge": {
+              "count": 960,
+              "aspect_max": 35.071101002782335,
+              "aspect_p95": 31.609771838305615,
+              "quality_min": 0.0496342002936049
+            },
+            "trailing_edge": {
+              "count": 960,
+              "aspect_max": 169.51309709885828,
+              "aspect_p95": 152.78306553520721,
+              "quality_min": 0.01027701456672047
+            },
+            "tip": {
+              "count": 1008,
+              "aspect_max": 75.13459462534811,
+              "aspect_p95": 11.297424607189992,
+              "quality_min": 0.023351649726806534
+            },
+            "Cp_symmetry_max": 1.057376408652999e-12,
+            "Cp_min_location": [
+              1.2556604354069967,
+              1.242825379077641,
+              -0.011519109917843407
+            ],
+            "principal_speed_at_Cp_min": 22.47821284080121,
+            "gradient_speed_at_Cp_min": 66.29715550601982,
+            "tip_5_percent_CD": -0.0007973092024608515
+          }
+        },
+        "c36_s36": {
+          "solve_seconds": 8.8159637,
+          "Cp_max": 0.78662470185713,
+          "panels": 10368,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 36,
+          "level": "c36_s36",
+          "CD_inviscid": 0.004313494840737898,
+          "smallest_span_interval_mm": 2.3680393775066477,
+          "first_chord_interval_mm": 0.9472157510026988,
+          "maximum_scaled_gradient_condition": 28.354225660686286,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 72,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "normal_velocity_residual_mps": 8.669459594656814e-11,
+          "contour_intervals": 72,
+          "maximum_sampled_node_CAD_distance_mm": 1.1620442432262297e-05,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -10.304322046972388,
+          "CL": 0.26009508448132335,
+          "bref_m": 2.4892,
+          "CL_wake": 0.2612005129263367,
+          "CD_trefftz": 0.004650502354736823,
+          "outer_strip_circulation": 0.20211563229231952,
+          "wake_length_m": 3.520260399459107,
+          "audit": {
+            "panels": 10368,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 10368,
+              "aspect_max": 113.18831593735678,
+              "aspect_p95": 22.355314819933636,
+              "quality_min": 0.015434779373388836
+            },
+            "leading_edge": {
+              "count": 1440,
+              "aspect_max": 23.417888815162055,
+              "aspect_p95": 21.655919808001183,
+              "quality_min": 0.07447154487515502
+            },
+            "trailing_edge": {
+              "count": 1440,
+              "aspect_max": 113.18831593735678,
+              "aspect_p95": 104.67199295783753,
+              "quality_min": 0.015434779373388836
+            },
+            "tip": {
+              "count": 1440,
+              "aspect_max": 43.35655908375223,
+              "aspect_p95": 9.09185182457746,
+              "quality_min": 0.04083698898231919
+            },
+            "Cp_symmetry_max": 7.787548383930698e-12,
+            "Cp_min_location": [
+              1.2507257004609815,
+              -1.243810653540831,
+              -0.008464039046984949
+            ],
+            "principal_speed_at_Cp_min": 23.488932910387113,
+            "gradient_speed_at_Cp_min": 115.73490345558312,
+            "tip_5_percent_CD": -0.001570791617732605
+          }
+        },
+        "c54_s16": {
+          "solve_seconds": 2.8875262,
+          "Cp_max": 0.7127004379082543,
+          "panels": 6912,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 16,
+          "level": "c54_s16",
+          "CD_inviscid": 0.005080161414844874,
+          "smallest_span_interval_mm": 11.957320005069702,
+          "first_chord_interval_mm": 0.4211332431159257,
+          "maximum_scaled_gradient_condition": 142.12585181936342,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 32,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "normal_velocity_residual_mps": 4.075650927859442e-11,
+          "contour_intervals": 108,
+          "maximum_sampled_node_CAD_distance_mm": 3.4666946720963175e-07,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -0.8277369961299683,
+          "CL": 0.2602594765363192,
+          "bref_m": 2.4892,
+          "CL_wake": 0.2634451763701937,
+          "CD_trefftz": 0.004569098262237207,
+          "outer_strip_circulation": 0.48603549894530496,
+          "wake_length_m": 3.520260399459108,
+          "audit": {
+            "panels": 6912,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 6912,
+              "aspect_max": 569.8365150592282,
+              "aspect_p95": 74.26321741369614,
+              "quality_min": 0.003044819876870798
+            },
+            "leading_edge": {
+              "count": 1024,
+              "aspect_max": 79.54726079559747,
+              "aspect_p95": 71.40932361616568,
+              "quality_min": 0.021808171063623823
+            },
+            "trailing_edge": {
+              "count": 1024,
+              "aspect_max": 569.8365150592282,
+              "aspect_p95": 442.6209235761963,
+              "quality_min": 0.003044819876870798
+            },
+            "tip": {
+              "count": 864,
+              "aspect_max": 166.21518038662037,
+              "aspect_p95": 23.203080099234864,
+              "quality_min": 0.010482111073558075
+            },
+            "Cp_symmetry_max": 5.387357226993572e-13,
+            "Cp_min_location": [
+              1.2498222839996858,
+              1.2406142266649767,
+              0.009841461222881933
+            ],
+            "principal_speed_at_Cp_min": 22.678087225323935,
+            "gradient_speed_at_Cp_min": 25.689000838074314,
+            "tip_5_percent_CD": 4.5832912673925826e-05
+          }
+        },
+        "c54_s24": {
+          "solve_seconds": 8.7144388,
+          "Cp_max": 0.7486344535388936,
+          "panels": 10368,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 24,
+          "level": "c54_s24",
+          "CD_inviscid": 0.0050376098072611565,
+          "smallest_span_interval_mm": 5.323862767077799,
+          "first_chord_interval_mm": 0.4211332431159257,
+          "maximum_scaled_gradient_condition": 95.18896245989689,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 48,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "normal_velocity_residual_mps": 4.647815465830263e-11,
+          "contour_intervals": 108,
+          "maximum_sampled_node_CAD_distance_mm": 1.3136539916268827e-08,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -2.782129637678129,
+          "CL": 0.26196226565442504,
+          "bref_m": 2.4892,
+          "CL_wake": 0.26223303558952515,
+          "CD_trefftz": 0.00462703538384821,
+          "outer_strip_circulation": 0.32485674311828616,
+          "wake_length_m": 3.520260399459108,
+          "audit": {
+            "panels": 10368,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 10368,
+              "aspect_max": 381.2520771404598,
+              "aspect_p95": 50.505184547533915,
+              "quality_min": 0.004554804994147903
+            },
+            "leading_edge": {
+              "count": 1536,
+              "aspect_max": 53.22150758624679,
+              "aspect_p95": 48.83604644133245,
+              "quality_min": 0.03261700915710405
+            },
+            "trailing_edge": {
+              "count": 1536,
+              "aspect_max": 381.2520771404598,
+              "aspect_p95": 317.67969337841066,
+              "quality_min": 0.004554804994147903
+            },
+            "tip": {
+              "count": 1512,
+              "aspect_max": 168.9852923241362,
+              "aspect_p95": 19.322394563932473,
+              "quality_min": 0.01030929511114673
+            },
+            "Cp_symmetry_max": 1.7830181775480014e-12,
+            "Cp_min_location": [
+              1.2614010478058726,
+              1.242825379077641,
+              -0.013819100443122378
+            ],
+            "principal_speed_at_Cp_min": 23.30149170240688,
+            "gradient_speed_at_Cp_min": 62.80579635650384,
+            "tip_5_percent_CD": -0.0006562444290373406
+          }
+        },
+        "c54_s36": {
+          "solve_seconds": 26.7203522,
+          "Cp_max": 0.7930624922517682,
+          "panels": 15552,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 36,
+          "level": "c54_s36",
+          "CD_inviscid": 0.004620776085075784,
+          "smallest_span_interval_mm": 2.3680393775066477,
+          "first_chord_interval_mm": 0.4211332431159257,
+          "maximum_scaled_gradient_condition": 63.60985667792011,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 72,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "normal_velocity_residual_mps": 1.0572609454584381e-10,
+          "contour_intervals": 108,
+          "maximum_sampled_node_CAD_distance_mm": 1.1620442432262297e-05,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -10.76738593379337,
+          "CL": 0.2636273573424071,
+          "bref_m": 2.4892,
+          "CL_wake": 0.2614378539248594,
+          "CD_trefftz": 0.004673318712883602,
+          "outer_strip_circulation": 0.21338304940000433,
+          "wake_length_m": 3.520260399459107,
+          "audit": {
+            "panels": 15552,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 15552,
+              "aspect_max": 254.57195519220988,
+              "aspect_p95": 33.25996407322992,
+              "quality_min": 0.006830085361009281
+            },
+            "leading_edge": {
+              "count": 2304,
+              "aspect_max": 35.53738866456334,
+              "aspect_p95": 32.42120152527913,
+              "quality_min": 0.04888918773717519
+            },
+            "trailing_edge": {
+              "count": 2304,
+              "aspect_max": 254.57195519220988,
+              "aspect_p95": 202.1579205420948,
+              "quality_min": 0.006830085361009281
+            },
+            "tip": {
+              "count": 2160,
+              "aspect_max": 97.5132806328159,
+              "aspect_p95": 11.114851601742517,
+              "quality_min": 0.01794030663599885
+            },
+            "Cp_symmetry_max": 4.703792910731863e-12,
+            "Cp_min_location": [
+              1.2495443187910782,
+              1.243810653540831,
+              -0.007776454907248657
+            ],
+            "principal_speed_at_Cp_min": 24.365488936510282,
+            "gradient_speed_at_Cp_min": 120.33570686603076,
+            "tip_5_percent_CD": -0.0015733724946119922
+          }
+        }
+      },
+      "pairs": [
+        {
+          "direction": "chord",
+          "fixed": "span=16",
+          "old": "c24_s16",
+          "new": "c36_s16",
+          "metrics": {
+            "CL_relative_percent": 0.8645025692313846,
+            "CD_relative_percent": 7.410552763377199,
+            "Cp_rms": 0.018662913593270603,
+            "Cp_p95": 0.04068915021169969
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.1270444745067545,
+          "wake_CD_change_percent": 0.6811702522135699
+        },
+        {
+          "direction": "chord",
+          "fixed": "span=16",
+          "old": "c36_s16",
+          "new": "c54_s16",
+          "metrics": {
+            "CL_relative_percent": 0.6006506784620003,
+            "CD_relative_percent": 4.325490241817209,
+            "Cp_rms": 0.015320996347810657,
+            "Cp_p95": 0.033747780448253564
+          },
+          "passed": true,
+          "wake_CL_change_percent": 0.07730748155201361,
+          "wake_CD_change_percent": 0.5706274535407063
+        },
+        {
+          "direction": "chord",
+          "fixed": "span=24",
+          "old": "c24_s24",
+          "new": "c36_s24",
+          "metrics": {
+            "CL_relative_percent": 1.4520336406032008,
+            "CD_relative_percent": 3.03141794863091,
+            "Cp_rms": 0.021614616314080695,
+            "Cp_p95": 0.046214987986950375
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.1436796461493195,
+          "wake_CD_change_percent": 0.640727100047167
+        },
+        {
+          "direction": "chord",
+          "fixed": "span=24",
+          "old": "c36_s24",
+          "new": "c54_s24",
+          "metrics": {
+            "CL_relative_percent": 0.8332668751472649,
+            "CD_relative_percent": 0.5213235576480013,
+            "Cp_rms": 0.016246914676796773,
+            "Cp_p95": 0.039244265816804826
+          },
+          "passed": true,
+          "wake_CL_change_percent": 0.08220970717660592,
+          "wake_CD_change_percent": 0.5262757746345992
+        },
+        {
+          "direction": "chord",
+          "fixed": "span=36",
+          "old": "c24_s36",
+          "new": "c36_s36",
+          "metrics": {
+            "CL_relative_percent": 2.216686935706491,
+            "CD_relative_percent": 6.822098237325358,
+            "Cp_rms": 0.02789407682003817,
+            "Cp_p95": 0.05411498477278133
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.15845201547373122,
+          "wake_CD_change_percent": 0.5946223607780521
+        },
+        {
+          "direction": "chord",
+          "fixed": "span=36",
+          "old": "c36_s36",
+          "new": "c54_s36",
+          "metrics": {
+            "CL_relative_percent": 1.3580698259360702,
+            "CD_relative_percent": 7.123718833179837,
+            "Cp_rms": 0.019018120011404533,
+            "Cp_p95": 0.04376232457420337
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.09086544121359452,
+          "wake_CD_change_percent": 0.4906213653141922
+        },
+        {
+          "direction": "span",
+          "fixed": "chord=24",
+          "old": "c24_s16",
+          "new": "c24_s24",
+          "metrics": {
+            "CL_relative_percent": 0.15950359231872158,
+            "CD_relative_percent": 8.936632231694997,
+            "Cp_rms": 0.019405712107355953,
+            "Cp_p95": 0.040246437877623546
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.48152093281945696,
+          "wake_CD_change_percent": 1.353413037413076
+        },
+        {
+          "direction": "span",
+          "fixed": "chord=24",
+          "old": "c24_s24",
+          "new": "c24_s36",
+          "metrics": {
+            "CL_relative_percent": 0.6343675017447259,
+            "CD_relative_percent": 22.677712035964504,
+            "Cp_rms": 0.019896564683656904,
+            "Cp_p95": 0.04086212175964499
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.32655939666437206,
+          "wake_CD_change_percent": 1.0824227448592794
+        },
+        {
+          "direction": "span",
+          "fixed": "chord=36",
+          "old": "c36_s16",
+          "new": "c36_s24",
+          "metrics": {
+            "CL_relative_percent": 0.422062690432079,
+            "CD_relative_percent": 4.62967527230086,
+            "Cp_rms": 0.018840168174666386,
+            "Cp_p95": 0.03900714466715858
+          },
+          "passed": true,
+          "wake_CL_change_percent": 0.46498686862554983,
+          "wake_CD_change_percent": 1.3126998484842334
+        },
+        {
+          "direction": "span",
+          "fixed": "chord=36",
+          "old": "c36_s24",
+          "new": "c36_s36",
+          "metrics": {
+            "CL_relative_percent": 0.11456039632951054,
+            "CD_relative_percent": 14.820564907782497,
+            "Cp_rms": 0.019071029877584668,
+            "Cp_p95": 0.04041838497652406
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.3118563931235552,
+          "wake_CD_change_percent": 1.03611565945132
+        },
+        {
+          "direction": "span",
+          "fixed": "chord=54",
+          "old": "c54_s16",
+          "new": "c54_s24",
+          "metrics": {
+            "CL_relative_percent": 0.6542659428842024,
+            "CD_relative_percent": 0.8376034560511503,
+            "Cp_rms": 0.018773461200896152,
+            "Cp_p95": 0.03876813193638602
+          },
+          "passed": true,
+          "wake_CL_change_percent": 0.4601112069576363,
+          "wake_CD_change_percent": 1.2680209154143807
+        },
+        {
+          "direction": "span",
+          "fixed": "chord=54",
+          "old": "c54_s24",
+          "new": "c54_s36",
+          "metrics": {
+            "CL_relative_percent": 0.6356227236859358,
+            "CD_relative_percent": 8.274434466610591,
+            "Cp_rms": 0.019036758865809973,
+            "Cp_p95": 0.03844281907857903
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.30323474038200793,
+          "wake_CD_change_percent": 1.0002804213893768
+        },
+        {
+          "direction": "both",
+          "fixed": "ratio=1.5",
+          "old": "c24_s16",
+          "new": "c36_s24",
+          "metrics": {
+            "CL_relative_percent": 1.290214002466028,
+            "CD_relative_percent": 11.697143506851171,
+            "Cp_rms": 0.02310151952632908,
+            "Cp_p95": 0.0460806237430641
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.33853313424254683,
+          "wake_CD_change_percent": 2.002811821566519
+        },
+        {
+          "direction": "both",
+          "fixed": "ratio=1.5",
+          "old": "c36_s24",
+          "new": "c54_s36",
+          "metrics": {
+            "CL_relative_percent": 1.4741860324406053,
+            "CD_relative_percent": 8.752621448122,
+            "Cp_rms": 0.02010566654563872,
+            "Cp_p95": 0.042814610375023536
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.22127432159753102,
+          "wake_CD_change_percent": 1.531820429560149
+        }
+      ],
+      "criteria": {
+        "CL_relative_percent": 1.0,
+        "CD_relative_percent": 5.0,
+        "Cp_rms": 0.02,
+        "Cp_p95": 0.05,
+        "pressure_domain": "0.01 <= x/c <= 0.99; 0.05 <= abs(2y/b) <= 0.95",
+        "required_successive_passing_pairs": 2,
+        "convergence_type": "engineering mesh sensitivity, not a continuum error bound"
+      },
+      "fixed_ratio_pressure_checks_passed": false
+    },
+    "bounded": {
+      "cases": {
+        "c24_s16": {
+          "solve_seconds": 6.7084289,
+          "Cp_max": 0.6770539098695889,
+          "panels": 3072,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 16,
+          "level": "c24_s16",
+          "CD_inviscid": 0.004635745551392798,
+          "smallest_span_interval_mm": 9.56429807730355,
+          "first_chord_interval_mm": 2.2868625461443544,
+          "maximum_scaled_gradient_condition": 43.091922246573795,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 32,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "spacing": "bounded",
+          "normal_velocity_residual_mps": 7.630118759038851e-12,
+          "contour_intervals": 48,
+          "maximum_sampled_node_CAD_distance_mm": 2.899533814893044e-07,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -1.3481909473624039,
+          "CL": 0.256865955924629,
+          "bref_m": 2.4892,
+          "CL_wake": 0.2636469398767609,
+          "CD_trefftz": 0.004511076886804791,
+          "outer_strip_circulation": 0.39461550194232753,
+          "wake_length_m": 3.520260399459108,
+          "audit": {
+            "panels": 3072,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 3072,
+              "aspect_max": 126.22159788370321,
+              "aspect_p95": 50.96136022203309,
+              "quality_min": 0.013828881306637375
+            },
+            "leading_edge": {
+              "count": 512,
+              "aspect_max": 53.51082757012667,
+              "aspect_p95": 49.70437415034413,
+              "quality_min": 0.03274949095861516
+            },
+            "trailing_edge": {
+              "count": 512,
+              "aspect_max": 126.22159788370321,
+              "aspect_p95": 117.24291660578128,
+              "quality_min": 0.013828881306637375
+            },
+            "tip": {
+              "count": 576,
+              "aspect_max": 33.83715009387876,
+              "aspect_p95": 14.345040266429354,
+              "quality_min": 0.05263453250534563
+            },
+            "Cp_symmetry_max": 2.708944180085382e-13,
+            "Cp_min_location": [
+              1.7254631936989249,
+              -1.2283854812143067,
+              -8.260536400435605e-05
+            ],
+            "principal_speed_at_Cp_min": 23.30732824817299,
+            "gradient_speed_at_Cp_min": 37.3495448981508,
+            "tip_5_percent_CD": -7.018308490099586e-05
+          }
+        },
+        "c24_s24": {
+          "solve_seconds": 4.369104,
+          "Cp_max": 0.6979942369643297,
+          "panels": 4608,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 24,
+          "level": "c24_s24",
+          "CD_inviscid": 0.0042766618301080086,
+          "smallest_span_interval_mm": 5.717156365360779,
+          "first_chord_interval_mm": 2.2868625461443544,
+          "maximum_scaled_gradient_condition": 28.979807079117034,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 48,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "spacing": "bounded",
+          "normal_velocity_residual_mps": 1.4634959910608814e-11,
+          "contour_intervals": 48,
+          "maximum_sampled_node_CAD_distance_mm": 1.3136536374252152e-08,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -2.1544920681193296,
+          "CL": 0.2554892924360778,
+          "bref_m": 2.4892,
+          "CL_wake": 0.2621471175424502,
+          "CD_trefftz": 0.004577886259874386,
+          "outer_strip_circulation": 0.286846654878405,
+          "wake_length_m": 3.5202603994591075,
+          "audit": {
+            "panels": 4608,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 4608,
+              "aspect_max": 84.71745303026742,
+              "aspect_p95": 32.536766458547824,
+              "quality_min": 0.02068062827911335
+            },
+            "leading_edge": {
+              "count": 768,
+              "aspect_max": 35.91541461437812,
+              "aspect_p95": 32.536766458547824,
+              "quality_min": 0.04905898665769888
+            },
+            "trailing_edge": {
+              "count": 768,
+              "aspect_max": 84.71745303026742,
+              "aspect_p95": 76.74788148220622,
+              "quality_min": 0.02068062827911335
+            },
+            "tip": {
+              "count": 768,
+              "aspect_max": 20.338329415312558,
+              "aspect_p95": 8.331724733003217,
+              "quality_min": 0.08906483686528208
+            },
+            "Cp_symmetry_max": 1.4317436125566019e-12,
+            "Cp_min_location": [
+              1.252508771624097,
+              -1.2426942812115465,
+              -0.010077650350566512
+            ],
+            "principal_speed_at_Cp_min": 19.57434889777366,
+            "gradient_speed_at_Cp_min": 56.157593669783374,
+            "tip_5_percent_CD": -0.0005875038377364392
+          }
+        },
+        "c24_s36": {
+          "solve_seconds": 11.3903646,
+          "Cp_max": 0.7292125777008778,
+          "panels": 6912,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 36,
+          "level": "c24_s36",
+          "CD_inviscid": 0.0034481873594081813,
+          "smallest_span_interval_mm": 3.614951312262747,
+          "first_chord_interval_mm": 2.2868625461443544,
+          "maximum_scaled_gradient_condition": 19.3653971040969,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 72,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "spacing": "bounded",
+          "normal_velocity_residual_mps": 3.937294934530655e-11,
+          "contour_intervals": 48,
+          "maximum_sampled_node_CAD_distance_mm": 2.2215546713448604e-05,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -4.404743281840973,
+          "CL": 0.2537748446034345,
+          "bref_m": 2.4892,
+          "CL_wake": 0.26114945442802556,
+          "CD_trefftz": 0.004630776203420649,
+          "outer_strip_circulation": 0.21626846687798446,
+          "wake_length_m": 3.520260399459108,
+          "audit": {
+            "panels": 6912,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 6912,
+              "aspect_max": 56.64815813318266,
+              "aspect_p95": 22.9337212771577,
+              "quality_min": 0.031099080422639157
+            },
+            "leading_edge": {
+              "count": 1152,
+              "aspect_max": 24.015619140098558,
+              "aspect_p95": 21.999327583685762,
+              "quality_min": 0.07393933484114869
+            },
+            "trailing_edge": {
+              "count": 1152,
+              "aspect_max": 56.64815813318266,
+              "aspect_p95": 51.89211962463608,
+              "quality_min": 0.031099080422639157
+            },
+            "tip": {
+              "count": 1248,
+              "aspect_max": 18.533452191323942,
+              "aspect_p95": 9.824281973087976,
+              "quality_min": 0.09812392190446967
+            },
+            "Cp_symmetry_max": 2.561062473205311e-12,
+            "Cp_min_location": [
+              1.2532095066417963,
+              1.2433950162292458,
+              -0.010077650350566512
+            ],
+            "principal_speed_at_Cp_min": 20.626714152404993,
+            "gradient_speed_at_Cp_min": 74.99774784036477,
+            "tip_5_percent_CD": -0.0011352755222473184
+          }
+        },
+        "c36_s16": {
+          "solve_seconds": 4.4752243,
+          "Cp_max": 0.6874275081466993,
+          "panels": 4608,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 16,
+          "level": "c36_s16",
+          "CD_inviscid": 0.004567979478659247,
+          "smallest_span_interval_mm": 9.56429807730355,
+          "first_chord_interval_mm": 1.4459805249050997,
+          "maximum_scaled_gradient_condition": 73.8198593239366,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 32,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "spacing": "bounded",
+          "normal_velocity_residual_mps": 6.406875030506853e-12,
+          "contour_intervals": 72,
+          "maximum_sampled_node_CAD_distance_mm": 2.899533814893044e-07,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -1.1247619372357966,
+          "CL": 0.25936063668169396,
+          "bref_m": 2.4892,
+          "CL_wake": 0.2639343346453115,
+          "CD_trefftz": 0.004541347401146149,
+          "outer_strip_circulation": 0.41432580798067475,
+          "wake_length_m": 3.520260399459108,
+          "audit": {
+            "panels": 4608,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 4608,
+              "aspect_max": 199.61447922879321,
+              "aspect_p95": 79.17703817971551,
+              "quality_min": 0.00871972399083706
+            },
+            "leading_edge": {
+              "count": 832,
+              "aspect_max": 87.4513410758435,
+              "aspect_p95": 77.14410945278414,
+              "quality_min": 0.01992684351059145
+            },
+            "trailing_edge": {
+              "count": 832,
+              "aspect_max": 199.61447922879321,
+              "aspect_p95": 159.1779254972497,
+              "quality_min": 0.00871972399083706
+            },
+            "tip": {
+              "count": 864,
+              "aspect_max": 53.51211843156861,
+              "aspect_p95": 21.64654108514052,
+              "quality_min": 0.032953377071674804
+            },
+            "Cp_symmetry_max": 5.802025526691068e-13,
+            "Cp_min_location": [
+              1.725743487706005,
+              -1.2283854812143067,
+              -5.2332070219808815e-05
+            ],
+            "principal_speed_at_Cp_min": 23.04444375571878,
+            "gradient_speed_at_Cp_min": 35.8830683637151,
+            "tip_5_percent_CD": -0.00013652842466299945
+          }
+        },
+        "c36_s24": {
+          "solve_seconds": 11.4057509,
+          "Cp_max": 0.7210096982505707,
+          "panels": 6912,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 24,
+          "level": "c36_s24",
+          "CD_inviscid": 0.004442318384803549,
+          "smallest_span_interval_mm": 5.717156365360779,
+          "first_chord_interval_mm": 1.4459805249050997,
+          "maximum_scaled_gradient_condition": 49.67687468173944,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 48,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "spacing": "bounded",
+          "normal_velocity_residual_mps": 1.638333912978851e-11,
+          "contour_intervals": 72,
+          "maximum_sampled_node_CAD_distance_mm": 1.3136536374252152e-08,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -2.3765455583334227,
+          "CL": 0.2591970581598115,
+          "bref_m": 2.4892,
+          "CL_wake": 0.2624824127385301,
+          "CD_trefftz": 0.004606340883103582,
+          "outer_strip_circulation": 0.30176249342918104,
+          "wake_length_m": 3.5202603994591075,
+          "audit": {
+            "panels": 6912,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 6912,
+              "aspect_max": 133.977310949639,
+              "aspect_p95": 53.14206986244468,
+              "quality_min": 0.013022580932490846
+            },
+            "leading_edge": {
+              "count": 1248,
+              "aspect_max": 58.69561948385482,
+              "aspect_p95": 51.777608418085286,
+              "quality_min": 0.029774632876534996
+            },
+            "trailing_edge": {
+              "count": 1248,
+              "aspect_max": 133.977310949639,
+              "aspect_p95": 109.62909673531402,
+              "quality_min": 0.013022580932490846
+            },
+            "tip": {
+              "count": 1152,
+              "aspect_max": 32.16426588389014,
+              "aspect_p95": 12.430379085750188,
+              "quality_min": 0.055448134252233196
+            },
+            "Cp_symmetry_max": 1.213251721310371e-12,
+            "Cp_min_location": [
+              1.2616779883624811,
+              1.2426942812115465,
+              -0.013940900200562885
+            ],
+            "principal_speed_at_Cp_min": 23.00680889638615,
+            "gradient_speed_at_Cp_min": 56.693105515426474,
+            "tip_5_percent_CD": -0.0006833900982620072
+          }
+        },
+        "c36_s36": {
+          "solve_seconds": 34.4461216,
+          "Cp_max": 0.7537409756324666,
+          "panels": 10368,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 36,
+          "level": "c36_s36",
+          "CD_inviscid": 0.0040441398169161254,
+          "smallest_span_interval_mm": 3.614951312262747,
+          "first_chord_interval_mm": 1.4459805249050997,
+          "maximum_scaled_gradient_condition": 33.224381904248716,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 72,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "spacing": "bounded",
+          "normal_velocity_residual_mps": 4.730005276343263e-11,
+          "contour_intervals": 72,
+          "maximum_sampled_node_CAD_distance_mm": 1.1407951996663903e-05,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -4.831777655271185,
+          "CL": 0.25887313424984687,
+          "bref_m": 2.4892,
+          "CL_wake": 0.26152472541177046,
+          "CD_trefftz": 0.004657234165193129,
+          "outer_strip_circulation": 0.22679091724729628,
+          "wake_length_m": 3.520260399459108,
+          "audit": {
+            "panels": 10368,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 10368,
+              "aspect_max": 89.58682804382828,
+              "aspect_p95": 35.024525781639866,
+              "quality_min": 0.019544588519063523
+            },
+            "leading_edge": {
+              "count": 1872,
+              "aspect_max": 39.24809605712036,
+              "aspect_p95": 34.12524530530991,
+              "quality_min": 0.044714861920457455
+            },
+            "trailing_edge": {
+              "count": 1872,
+              "aspect_max": 89.58682804382828,
+              "aspect_p95": 71.63229757083366,
+              "quality_min": 0.019544588519063523
+            },
+            "tip": {
+              "count": 1872,
+              "aspect_max": 29.309923733429233,
+              "aspect_p95": 9.718434481656187,
+              "quality_min": 0.061011425759253446
+            },
+            "Cp_symmetry_max": 1.482147737874584e-12,
+            "Cp_min_location": [
+              1.2562327795424677,
+              1.2433950162292458,
+              -0.011563285950773425
+            ],
+            "principal_speed_at_Cp_min": 22.941336873692702,
+            "gradient_speed_at_Cp_min": 79.32368069740494,
+            "tip_5_percent_CD": -0.0014017602279022391
+          }
+        },
+        "c54_s16": {
+          "solve_seconds": 11.4221293,
+          "Cp_max": 0.6944490865636048,
+          "panels": 6912,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 16,
+          "level": "c54_s16",
+          "CD_inviscid": 0.004607809166026259,
+          "smallest_span_interval_mm": 9.56429807730355,
+          "first_chord_interval_mm": 0.9406355694793214,
+          "maximum_scaled_gradient_condition": 118.24038042082383,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 32,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "spacing": "bounded",
+          "normal_velocity_residual_mps": 1.1252110354575962e-11,
+          "contour_intervals": 108,
+          "maximum_sampled_node_CAD_distance_mm": 2.899533814893044e-07,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -0.9743109841297923,
+          "CL": 0.26099482343991187,
+          "bref_m": 2.4892,
+          "CL_wake": 0.26408451380615483,
+          "CD_trefftz": 0.004565204636981421,
+          "outer_strip_circulation": 0.43289000810875444,
+          "wake_length_m": 3.520260399459108,
+          "audit": {
+            "panels": 6912,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 6912,
+              "aspect_max": 306.8440967900288,
+              "aspect_p95": 120.61455782408308,
+              "quality_min": 0.00566284766151329
+            },
+            "leading_edge": {
+              "count": 1280,
+              "aspect_max": 131.01599713525647,
+              "aspect_p95": 117.7596304292853,
+              "quality_min": 0.013277089542937595
+            },
+            "trailing_edge": {
+              "count": 1280,
+              "aspect_max": 306.8440967900288,
+              "aspect_p95": 245.18810691045016,
+              "quality_min": 0.00566284766151329
+            },
+            "tip": {
+              "count": 1296,
+              "aspect_max": 82.25794897693383,
+              "aspect_p95": 33.95650689947233,
+              "quality_min": 0.021306115038558077
+            },
+            "Cp_symmetry_max": 7.218670106112768e-13,
+            "Cp_min_location": [
+              1.7259119360244801,
+              -1.2283854812143067,
+              -3.4095002695989006e-05
+            ],
+            "principal_speed_at_Cp_min": 22.848742038393485,
+            "gradient_speed_at_Cp_min": 35.04330905800618,
+            "tip_5_percent_CD": -0.00010420389551518408
+          }
+        },
+        "c54_s24": {
+          "solve_seconds": 30.0946328,
+          "Cp_max": 0.7360515973412739,
+          "panels": 10368,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 24,
+          "level": "c54_s24",
+          "CD_inviscid": 0.004657315037417288,
+          "smallest_span_interval_mm": 5.717156365360779,
+          "first_chord_interval_mm": 0.9406355694793214,
+          "maximum_scaled_gradient_condition": 79.59845600242815,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 48,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "spacing": "bounded",
+          "normal_velocity_residual_mps": 2.2009727373983878e-11,
+          "contour_intervals": 108,
+          "maximum_sampled_node_CAD_distance_mm": 1.3136536374252152e-08,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -2.0761995038546117,
+          "CL": 0.26169671796473476,
+          "bref_m": 2.4892,
+          "CL_wake": 0.26265947095347536,
+          "CD_trefftz": 0.004628719341912328,
+          "outer_strip_circulation": 0.31655651586591627,
+          "wake_length_m": 3.5202603994591075,
+          "audit": {
+            "panels": 10368,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 10368,
+              "aspect_max": 205.94772046361774,
+              "aspect_p95": 80.35338248009252,
+              "quality_min": 0.008450308725820027
+            },
+            "leading_edge": {
+              "count": 1920,
+              "aspect_max": 87.93535947584144,
+              "aspect_p95": 77.86953380082218,
+              "quality_min": 0.019822407446553437
+            },
+            "trailing_edge": {
+              "count": 1920,
+              "aspect_max": 205.94772046361774,
+              "aspect_p95": 166.83882146619032,
+              "quality_min": 0.008450308725820027
+            },
+            "tip": {
+              "count": 1728,
+              "aspect_max": 49.442380894339145,
+              "aspect_p95": 19.290636156474463,
+              "quality_min": 0.03571681848400907
+            },
+            "Cp_symmetry_max": 1.8343104812856836e-12,
+            "Cp_min_location": [
+              1.2623569357587359,
+              1.2426942812115465,
+              -0.01420590117281329
+            ],
+            "principal_speed_at_Cp_min": 23.174387909039005,
+            "gradient_speed_at_Cp_min": 54.11786967715322,
+            "tip_5_percent_CD": -0.0005968355662618801
+          }
+        },
+        "c54_s36": {
+          "solve_seconds": 57.0310263,
+          "Cp_max": 0.7719192297165325,
+          "panels": 15552,
+          "speed_mps": 30.0,
+          "reference_nodes_used": false,
+          "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+          "span_intervals": 36,
+          "level": "c54_s36",
+          "CD_inviscid": 0.004611693439440658,
+          "smallest_span_interval_mm": 3.614951312262747,
+          "first_chord_interval_mm": 0.9406355694793214,
+          "maximum_scaled_gradient_condition": 53.2633203137607,
+          "connected_root": true,
+          "sref_m2": 1.239223328,
+          "wake_segments": 72,
+          "linear_solver": "in-place LU, 32 sampled equation residual checks",
+          "flowpanel_version": "2.0.0",
+          "density_kg_m3": 1.225,
+          "triangulation": "mirrored_shortest",
+          "aoa_deg": 4.2,
+          "spacing": "bounded",
+          "normal_velocity_residual_mps": 5.0881965307780774e-11,
+          "contour_intervals": 108,
+          "maximum_sampled_node_CAD_distance_mm": 1.1407951996663903e-05,
+          "pressure_reconstruction": "least_squares",
+          "Cp_min": -4.407586072606183,
+          "CL": 0.26247004192515716,
+          "bref_m": 2.4892,
+          "CL_wake": 0.2617258028818693,
+          "CD_trefftz": 0.00467806214043713,
+          "outer_strip_circulation": 0.2382064452215668,
+          "wake_length_m": 3.520260399459108,
+          "audit": {
+            "panels": 15552,
+            "unmatched_reflected_triangles": 0,
+            "all": {
+              "count": 15552,
+              "aspect_max": 137.7113997020584,
+              "aspect_p95": 53.86318938733102,
+              "quality_min": 0.01266698897930795
+            },
+            "leading_edge": {
+              "count": 2880,
+              "aspect_max": 58.79988090890789,
+              "aspect_p95": 52.11934434836133,
+              "quality_min": 0.0297345591513338
+            },
+            "trailing_edge": {
+              "count": 2880,
+              "aspect_max": 137.7113997020584,
+              "aspect_p95": 110.24369861998977,
+              "quality_min": 0.01266698897930795
+            },
+            "tip": {
+              "count": 2808,
+              "aspect_max": 45.05473305200049,
+              "aspect_p95": 14.529212201129084,
+              "quality_min": 0.03926642020528317
+            },
+            "Cp_symmetry_max": 2.666755705149626e-12,
+            "Cp_min_location": [
+              1.2586531415517797,
+              1.2433950162292458,
+              -0.012597657921988447
+            ],
+            "principal_speed_at_Cp_min": 23.656258712857714,
+            "gradient_speed_at_Cp_min": 76.24147859453691,
+            "tip_5_percent_CD": -0.0013394689931486568
+          }
+        }
+      },
+      "pairs": [
+        {
+          "direction": "chord",
+          "fixed": "span=16",
+          "old": "c24_s16",
+          "new": "c36_s16",
+          "metrics": {
+            "CL_relative_percent": 0.9711994522921374,
+            "CD_relative_percent": 1.4618160548779735,
+            "Cp_rms": 0.019190363319456467,
+            "Cp_p95": 0.039045457688031054
+          },
+          "passed": true,
+          "wake_CL_change_percent": 0.10900743573392102,
+          "wake_CD_change_percent": 0.6710263447271547
+        },
+        {
+          "direction": "chord",
+          "fixed": "span=16",
+          "old": "c36_s16",
+          "new": "c54_s16",
+          "metrics": {
+            "CL_relative_percent": 0.6300827986567281,
+            "CD_relative_percent": 0.8719322745009972,
+            "Cp_rms": 0.01588028419226474,
+            "Cp_p95": 0.03076903706268208
+          },
+          "passed": true,
+          "wake_CL_change_percent": 0.0569001986971962,
+          "wake_CD_change_percent": 0.5253338652148054
+        },
+        {
+          "direction": "chord",
+          "fixed": "span=24",
+          "old": "c24_s24",
+          "new": "c36_s24",
+          "metrics": {
+            "CL_relative_percent": 1.4512411414115522,
+            "CD_relative_percent": 3.873501372713317,
+            "Cp_rms": 0.021672314914784184,
+            "Cp_p95": 0.04429258473830457
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.12790344567708,
+          "wake_CD_change_percent": 0.6215668457865364
+        },
+        {
+          "direction": "chord",
+          "fixed": "span=24",
+          "old": "c36_s24",
+          "new": "c54_s24",
+          "metrics": {
+            "CL_relative_percent": 0.9643858702216068,
+            "CD_relative_percent": 4.839739838306234,
+            "Cp_rms": 0.01620829727151947,
+            "Cp_p95": 0.035192764904622476
+          },
+          "passed": true,
+          "wake_CL_change_percent": 0.06745526799223356,
+          "wake_CD_change_percent": 0.4858185569989404
+        },
+        {
+          "direction": "chord",
+          "fixed": "span=36",
+          "old": "c24_s36",
+          "new": "c36_s36",
+          "metrics": {
+            "CL_relative_percent": 2.008981486868522,
+            "CD_relative_percent": 17.283064850925854,
+            "Cp_rms": 0.026882601820852003,
+            "Cp_p95": 0.05371173443762045
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.14369970045191582,
+          "wake_CD_change_percent": 0.571350473662191
+        },
+        {
+          "direction": "chord",
+          "fixed": "span=36",
+          "old": "c36_s36",
+          "new": "c54_s36",
+          "metrics": {
+            "CL_relative_percent": 1.3894480343560112,
+            "CD_relative_percent": 14.033976277242633,
+            "Cp_rms": 0.01965014612974275,
+            "Cp_p95": 0.0420354184316985
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.07688660021809568,
+          "wake_CD_change_percent": 0.4472176941340722
+        },
+        {
+          "direction": "span",
+          "fixed": "chord=24",
+          "old": "c24_s16",
+          "new": "c24_s24",
+          "metrics": {
+            "CL_relative_percent": 0.5359462617752109,
+            "CD_relative_percent": 7.745975643052794,
+            "Cp_rms": 0.018179190540655615,
+            "Cp_p95": 0.035518018897429914
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.5688753053655016,
+          "wake_CD_change_percent": 1.481007190655892
+        },
+        {
+          "direction": "span",
+          "fixed": "chord=24",
+          "old": "c24_s24",
+          "new": "c24_s36",
+          "metrics": {
+            "CL_relative_percent": 0.6710448865766994,
+            "CD_relative_percent": 19.37198926665904,
+            "Cp_rms": 0.020093230392245098,
+            "Cp_p95": 0.04121026139830369
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.3805737494950945,
+          "wake_CD_change_percent": 1.1553354658425885
+        },
+        {
+          "direction": "span",
+          "fixed": "chord=36",
+          "old": "c36_s16",
+          "new": "c36_s24",
+          "metrics": {
+            "CL_relative_percent": 0.06306991067547285,
+            "CD_relative_percent": 2.750911961027036,
+            "Cp_rms": 0.017788698652763748,
+            "Cp_p95": 0.03323913004234456
+          },
+          "passed": true,
+          "wake_CL_change_percent": 0.5501072487338776,
+          "wake_CD_change_percent": 1.4311497495441694
+        },
+        {
+          "direction": "span",
+          "fixed": "chord=36",
+          "old": "c36_s24",
+          "new": "c36_s36",
+          "metrics": {
+            "CL_relative_percent": 0.12497206267090277,
+            "CD_relative_percent": 8.963305494930928,
+            "Cp_rms": 0.019554969807265576,
+            "Cp_p95": 0.04019944293112143
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.36485771247221077,
+          "wake_CD_change_percent": 1.1048527102331285
+        },
+        {
+          "direction": "span",
+          "fixed": "chord=54",
+          "old": "c54_s16",
+          "new": "c54_s24",
+          "metrics": {
+            "CL_relative_percent": 0.2689304391450875,
+            "CD_relative_percent": 1.0743906617496357,
+            "Cp_rms": 0.016627482415033486,
+            "Cp_p95": 0.03314532842394706
+          },
+          "passed": true,
+          "wake_CL_change_percent": 0.539616213060301,
+          "wake_CD_change_percent": 1.3912783759219005
+        },
+        {
+          "direction": "span",
+          "fixed": "chord=54",
+          "old": "c54_s24",
+          "new": "c54_s36",
+          "metrics": {
+            "CL_relative_percent": 0.2955038819121292,
+            "CD_relative_percent": 0.9795686486763766,
+            "Cp_rms": 0.018960034660050633,
+            "Cp_p95": 0.03889017234293468
+          },
+          "passed": true,
+          "wake_CL_change_percent": 0.3554671256348563,
+          "wake_CD_change_percent": 1.0660140501069115
+        },
+        {
+          "direction": "both",
+          "fixed": "ratio=1.5",
+          "old": "c24_s16",
+          "new": "c36_s24",
+          "metrics": {
+            "CL_relative_percent": 0.907517006989611,
+            "CD_relative_percent": 4.172514743203148,
+            "Cp_rms": 0.02480287575843626,
+            "Cp_p95": 0.047998102560221634
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.4416994708055899,
+          "wake_CD_change_percent": 2.111779486123244
+        },
+        {
+          "direction": "both",
+          "fixed": "ratio=1.5",
+          "old": "c36_s24",
+          "new": "c54_s36",
+          "metrics": {
+            "CL_relative_percent": 1.2627395498168381,
+            "CD_relative_percent": 3.8127626154963012,
+            "Cp_rms": 0.020594982705080606,
+            "Cp_p95": 0.041538634378322344
+          },
+          "passed": false,
+          "wake_CL_change_percent": 0.2882516389448586,
+          "wake_CD_change_percent": 1.5570115011815044
+        }
+      ],
+      "criteria": {
+        "CL_relative_percent": 1.0,
+        "CD_relative_percent": 5.0,
+        "Cp_rms": 0.02,
+        "Cp_p95": 0.05,
+        "pressure_domain": "0.01 <= x/c <= 0.99; 0.05 <= abs(2y/b) <= 0.95",
+        "required_successive_passing_pairs": 2,
+        "convergence_type": "engineering mesh sensitivity, not a continuum error bound"
+      },
+      "fixed_ratio_pressure_checks_passed": false
+    }
+  },
+  "full_convergence_demonstrated": false,
+  "wake_method": "Unscaled midpoint Trefftz diagnostic of the prescribed rigid wake; no relaxation",
+  "closed_tip_diagnostic": {
+    "c24_s16": {
+      "solve_seconds": 3.5602037,
+      "Cp_max": 0.6771676913476679,
+      "closed_tips": true,
+      "panels": 3164,
+      "speed_mps": 30.0,
+      "reference_nodes_used": false,
+      "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+      "span_intervals": 16,
+      "level": "c24_s16",
+      "CD_inviscid": 0.004888098424355822,
+      "smallest_span_interval_mm": 9.56429807730355,
+      "first_chord_interval_mm": 2.2868625461443544,
+      "maximum_scaled_gradient_condition": 43.091922246573795,
+      "connected_root": true,
+      "sref_m2": 1.239223328,
+      "wake_segments": 32,
+      "linear_solver": "in-place LU, 32 sampled equation residual checks",
+      "normal_velocity_rms_mps": 0.017145743506785282,
+      "flowpanel_version": "2.0.0",
+      "density_kg_m3": 1.225,
+      "triangulation": "mirrored_shortest",
+      "aoa_deg": 4.2,
+      "spacing": "bounded",
+      "normal_velocity_residual_mps": 0.05476920530242402,
+      "contour_intervals": 48,
+      "maximum_sampled_node_CAD_distance_mm": 2.899533814893044e-07,
+      "pressure_reconstruction": "least_squares",
+      "Cp_min": -14.43887856088642,
+      "boundary_solver": "closed least squares, prescribed constant-strength gauge",
+      "CL": 0.2538888285647407,
+      "bref_m": 2.4892,
+      "Cp_min_wing_surfaces": -0.7565134415668342,
+      "CL_wake": 0.26387423548801714,
+      "CD_trefftz": 0.004524130264532537,
+      "outer_strip_circulation": 0.39552654054902614,
+      "wake_length_m": 3.520260399459108
+    },
+    "c36_s24": {
+      "solve_seconds": 8.5541093,
+      "Cp_max": 0.7210499141231813,
+      "closed_tips": true,
+      "panels": 7052,
+      "speed_mps": 30.0,
+      "reference_nodes_used": false,
+      "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+      "span_intervals": 24,
+      "level": "c36_s24",
+      "CD_inviscid": 0.005238664364934728,
+      "smallest_span_interval_mm": 5.717156365360779,
+      "first_chord_interval_mm": 1.4459805249050997,
+      "maximum_scaled_gradient_condition": 49.67687468173944,
+      "connected_root": true,
+      "sref_m2": 1.239223328,
+      "wake_segments": 48,
+      "linear_solver": "in-place LU, 32 sampled equation residual checks",
+      "normal_velocity_rms_mps": 0.0059174576698870825,
+      "flowpanel_version": "2.0.0",
+      "density_kg_m3": 1.225,
+      "triangulation": "mirrored_shortest",
+      "aoa_deg": 4.2,
+      "spacing": "bounded",
+      "normal_velocity_residual_mps": 0.018071924983889653,
+      "contour_intervals": 72,
+      "maximum_sampled_node_CAD_distance_mm": 1.3136536374252152e-08,
+      "pressure_reconstruction": "least_squares",
+      "Cp_min": -29.183584983184254,
+      "boundary_solver": "closed least squares, prescribed constant-strength gauge",
+      "CL": 0.2571069317711537,
+      "bref_m": 2.4892,
+      "Cp_min_wing_surfaces": -0.7481604969429851,
+      "CL_wake": 0.2627046229978834,
+      "CD_trefftz": 0.004619885303578967,
+      "outer_strip_circulation": 0.3026777879469168,
+      "wake_length_m": 3.5202603994591075
+    },
+    "c54_s36": {
+      "solve_seconds": 152.5870567,
+      "Cp_max": 0.7719387157434027,
+      "closed_tips": true,
+      "panels": 15764,
+      "speed_mps": 30.0,
+      "reference_nodes_used": false,
+      "source_sha256": "9b549fe3a909c68072bc74d8d5d05bd4bbb32c0b69af658aa2daaa8a413e5faa",
+      "span_intervals": 36,
+      "level": "c54_s36",
+      "CD_inviscid": 0.005961917573535649,
+      "smallest_span_interval_mm": 3.614951312262747,
+      "first_chord_interval_mm": 0.9406355694793214,
+      "maximum_scaled_gradient_condition": 53.2633203137607,
+      "connected_root": true,
+      "sref_m2": 1.239223328,
+      "wake_segments": 72,
+      "linear_solver": "in-place LU, 32 sampled equation residual checks",
+      "normal_velocity_rms_mps": 0.0011986894445796148,
+      "flowpanel_version": "2.0.0",
+      "density_kg_m3": 1.225,
+      "triangulation": "mirrored_shortest",
+      "aoa_deg": 4.2,
+      "spacing": "bounded",
+      "normal_velocity_residual_mps": 0.0034998140471009798,
+      "contour_intervals": 108,
+      "maximum_sampled_node_CAD_distance_mm": 1.1407951996663903e-05,
+      "pressure_reconstruction": "least_squares",
+      "Cp_min": -57.346937654088805,
+      "boundary_solver": "closed least squares, prescribed constant-strength gauge",
+      "CL": 0.2606217584797629,
+      "bref_m": 2.4892,
+      "Cp_min_wing_surfaces": -0.9537771621641934,
+      "CL_wake": 0.2619163970726627,
+      "CD_trefftz": 0.004690210345383116,
+      "outer_strip_circulation": 0.23892951285121963,
+      "wake_length_m": 3.520260399459108
+    }
+  }
+}
